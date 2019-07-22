@@ -6,11 +6,25 @@
 
 {% block beforeMain %}
 <div class='header'>
-	{{ apos.area(data.page, 'header', { 
-		widgets: {
-			header: {}
-		}
-	}) }}
+	{{ apos.singleton(data.page, 'header', 'headers', {  }) }}
+</div>
+
+<div class='services'>
+	{{ apos.singleton(data.page, 'services_header', 'section-headers', { }) }}
+	{{ apos.singleton(data.page, 'service_button', 'link-button', {  }) }}
+	{{ apos.singleton(data.page, 'otherthing', 'image-over-text', {  }) }}
+</div>
+
+<div class='tbd'>
+</div>
+
+<div class='the-village'>
+</div>
+
+<div class='team'>
+</div>
+
+<div class='contact-form'>
 </div>
 {% endblock %}
 
@@ -18,4 +32,4 @@
 {% endblock %}
 
 {% block aftermain %}
-{% endblock %}
+{% endblock %}name

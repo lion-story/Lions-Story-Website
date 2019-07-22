@@ -21,7 +21,11 @@ var apos = require('apostrophe')({
     // `views/` folder of the project
 
     'apostrophe-templates': { viewsFolderFallback: path.join(__dirname, 'views') },
-    'header-widgets': {}
+    'link-widgets': {},
+    'headers-widgets': {},
+    'section-headers-widgets': {},
+    'image-over-text-widgets': {},
+    'link-button-widgets': {}
 
   }
 });
