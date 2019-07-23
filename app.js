@@ -21,11 +21,29 @@ var apos = require('apostrophe')({
     // `views/` folder of the project
 
     'apostrophe-templates': { viewsFolderFallback: path.join(__dirname, 'views') },
-    'link-widgets': {},
+    
+    //Used for the headers/heros of the page
+    //Contains a navbar, bg image, logo image, and text for the page title
     'headers-widgets': {},
+
+    //Used for the footer of every page
+    //Contains Logo, newsletter link, social media links, copyright, CBK logo
+    'footer-widgets': {},
+
+    //Used for the headers of sections in a page
+    //EX: Title - Hear from the village, Text - the text directly below the title but before the images
     'section-headers-widgets': {},
+
+    //An image above a text area
     'image-over-text-widgets': {},
-    'link-button-widgets': {}
+
+    //A button that links to another page
+    'link-button-widgets': {},
+
+    //Used for profiles in the team section of the home page as well as the team page
+    'mini-profile-widgets': {},
+
+    'favicon-widgets': {}
 
   }
 });
