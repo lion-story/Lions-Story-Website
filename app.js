@@ -43,7 +43,17 @@ var apos = require('apostrophe')({
     //Used for profiles in the team section of the home page as well as the team page
     'mini-profile-widgets': {},
 
-    'favicon-widgets': {}
+    //Used to select and place favicons with links
+    'favicon-widgets': {},
+
+    //An image with a textbox to the right of it
+    'image-left-text-widgets': {},
+
+    //Profiles for trainers, contain an image for a headshot, a textbox for name, and a button for a linkedin link
+    'trainer-profile-widgets': {},
+
+    //For the creation of bullet lists
+    'bullet-list-widgets': {}
 
   }
 });

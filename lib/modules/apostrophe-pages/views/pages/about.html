@@ -4,11 +4,42 @@
 
 {% extends 'layout.html' %}
 
-{% block beforeMain %}
-{% endblock %}
-
 {% block main %}
-{% endblock %}
+<div class = 'proverb'>
+	{{ apos.singleton(data.page, 'proverb', 'apostrophe-rich-text', {
+		toolbar: ['Styles', 'Bold', 'Italic']
+	 }) }}
+</div>
 
-{% block aftermain %}
-{% endblock %}name
+<div class = 'racial-literacy'>
+	{{ apos.singleton(data.page, 'racial_literacy_header', 'section-headers', { 
+		toolbar: ['Styles', 'Bold', 'Italic']
+	}) }}
+</div>
+
+<div class = 'our-approach'>
+	{{ apos.singleton(data.page, 'our_approach_header', 'section-headers', { }) }}
+	{{ apos.singleton(data.page, 'approach_image', 'apostrophe-images', {  }) }}
+	{{ apos.singleton(data.page, 'learn_more', 'link-button', {  }) }}
+</div>
+
+<div class = 'team'>
+	{{ apos.singleton(data.page, 'team_header', 'section-headers', {  }) }}
+	<div class = 'team-member-large'>
+		{{ apos.singleton(data.page, 'team_member_large', 'image-left-text', {  }) }}
+	</div>
+	<div class = 'team-member-small'>
+		{{ apos.singleton(data.page, 'team_member_small', 'image-left-text', {  }) }}
+	</div>
+	<div class = 'team-member-small'>
+		{{ apos.singleton(data.page, 'team_member_small', 'image-left-text', {  }) }}
+	</div>
+</div>
+
+<div class = 'trainers'>
+	{{ apos.singleton(data.page, 'trainers_header', 'section-headers', {  }) }}
+	<div class = 'trainer-profiles'>
+
+	</div>
+</div>
+{% endblock %}
