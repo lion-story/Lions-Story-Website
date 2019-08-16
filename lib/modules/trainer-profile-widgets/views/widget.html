@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class = 'trainer-profile-image'>
+	{{ apos.singleton(data.widget, 'trainer_profile_image', 'apostrophe-images', {  }) }}
+</div>
+
+<h4 class = 'trainer-profile-name'>
+	{{ data.widget.trainer_profile_name }}
+</h4>
+
+<div class = 'trainer-profile-link'>
+	<button type = 'button' class = 'trainer-profile-button'>
+		<a href = '{{ data.widget.trainer_profile_link }}' class = 'fa fa-linkedin'></a>
+	</button>
+</div>

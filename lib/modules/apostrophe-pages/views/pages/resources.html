@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+<div class = 'featured-content'>
+	<div class = 'featured-content-header'>
+		{{ apos.singleton(data.page, 'featured_content_header', 'apostrophe-rich-text', {  }) }}
+	</div>
+	<div class = 'featured-content-text'>
+		{{ apos.singleton(data.page, 'featured_content_text', 'section-headers', {  }) }}
+	</div>
+</div>
+
+<div class = 'video-resources'>
+	<div class = 'video-resources-header'>
+		{{ apos.singleton(data.page, 'video_resources_header', 'apostrophe-rich-text', {  }) }}
+	</div>
+	<div class = 'video-resources-videos'>
+
+	</div>
+
+	{{ apos.singleton(data.page, 'check_out_more_button', 'link-button', { }) }}
+</div>
+
+<div class = 'tabbed-resources'>
+	<div class = 'tab-article'>
+
+	</div>
+
+	<div class = 'tab-paper'>
+
+	</div>
+
+	<div class = 'tab-web'>
+
+	</div>
+</div>

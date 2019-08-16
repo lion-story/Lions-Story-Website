@@ -6,12 +6,54 @@
 {% extends "layout.html" %}
 
 {% block main %}
+<!--
   <div class="main-content">
-    <h3>Hello world!
       {% if not data.user %}
         <a class="login-link" href="{{ apos.prefix }}/login">Login</a>
       {% endif %}
     </h3>
     <p>This is a very bare bones Apostrophe project. Now, get to work and make a real website!</p>
   </div>
+</-->
+
+<div class='services'>
+	{{ apos.singleton(data.page, 'services_header', 'section-headers', { }) }}
+	{{ apos.singleton(data.page, 'service_button', 'link-button', {  }) }}
+	{{ apos.singleton(data.page, 'service_one', 'image-over-text', {  }) }}
+	{{ apos.singleton(data.page, 'service_two', 'image-over-text', {  }) }}
+	{{ apos.singleton(data.page, 'service_three', 'image-over-text', {  }) }}
+</div>
+
+<div class='val-app-his'>
+  {{ apos.singleton(data.page, 'vah_image', 'apostrophe-images', {  }) }}
+  <div class='value'>
+    {{ apos.singleton(data.page, 'service_one', 'image-over-text', {  }) }}
+  </div>
+  <div class='approach'>
+    {{ apos.singleton(data.page, 'service_two', 'image-over-text', {  }) }}
+    {{ apos.singleton(data.page, 'about_page_button', 'link-button', { }) }}
+  </div>
+  <div class='history'>
+    {{ apos.singleton(data.page, 'service_three', 'image-over-text', {  }) }}
+  </div>
+</div>
+
+<div class='the-village'>
+  {{ apos.singleton(data.page, 'village_header', 'section-headers', { }) }}
+  {{ apos.singleton(data.page, 'team_mini_one', 'mini-profile', { }) }}
+  {{ apos.singleton(data.page, 'team_mini_two', 'mini-profile', { }) }}
+  {{ apos.singleton(data.page, 'team_mini_three', 'mini-profile', { }) }}
+  {{ apos.singleton(data.page, 'stories_page_button', 'link-button', { }) }}
+</div>
+
+<div class='team'>
+  {{ apos.singleton(data.page, 'team_header', 'section-headers', { }) }}
+  {{ apos.singleton(data.page, 'team_mini_one', 'mini-profile', { }) }}
+  {{ apos.singleton(data.page, 'team_mini_two', 'mini-profile', { }) }}
+  {{ apos.singleton(data.page, 'team_mini_three', 'mini-profile', { }) }}
+  {{ apos.singleton(data.page, 'team_page_button', 'link-button', { }) }}
+</div>
+
+<div class='contact-form'>
+</div>
 {% endblock %}

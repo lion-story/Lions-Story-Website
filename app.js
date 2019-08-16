@@ -1,7 +1,7 @@
 var path = require('path');
 
 var apos = require('apostrophe')({
-  shortName: 'Lion-Story',
+  shortName: 'Lion-Story-Website',
 
   // See lib/modules for basic project-level configuration of our modules
   // responsible for serving static assets, managing page templates and
@@ -20,7 +20,40 @@ var apos = require('apostrophe')({
     // If a template is not found somewhere else, serve it from the top-level
     // `views/` folder of the project
 
-    'apostrophe-templates': { viewsFolderFallback: path.join(__dirname, 'views') }
+    'apostrophe-templates': { viewsFolderFallback: path.join(__dirname, 'views') },
+    
+    //Used for the headers/heros of the page
+    //Contains a navbar, bg image, logo image, and text for the page title
+    'headers-widgets': {},
+
+    //Used for the footer of every page
+    //Contains Logo, newsletter link, social media links, copyright, CBK logo
+    'footer-widgets': {},
+
+    //Used for the headers of sections in a page
+    //EX: Title - Hear from the village, Text - the text directly below the title but before the images
+    'section-headers-widgets': {},
+
+    //An image above a text area
+    'image-over-text-widgets': {},
+
+    //A button that links to another page
+    'link-button-widgets': {},
+
+    //Used for profiles in the team section of the home page as well as the team page
+    'mini-profile-widgets': {},
+
+    //Used to select and place favicons with links
+    'favicon-widgets': {},
+
+    //An image with a textbox to the right of it
+    'image-left-text-widgets': {},
+
+    //Profiles for trainers, contain an image for a headshot, a textbox for name, and a button for a linkedin link
+    'trainer-profile-widgets': {},
+
+    //For the creation of bullet lists
+    'bullet-list-widgets': {}
 
   }
 });
