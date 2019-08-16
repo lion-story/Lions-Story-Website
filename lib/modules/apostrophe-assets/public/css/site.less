@@ -1,33 +1,46 @@
 @import "utils/reset.less";
 
 // Delete the boilerplate CSS below when you are ready to dive in and customize your sites:
-body { background-color: @apos-light; }
+body { 
+	background-color: @apos-light;
+	font-family: 'Lato', sans-serif;
+}
 
 .main-content {
-  font-family: 'Karla', sans-serif;
-  margin: 200px auto;
-  padding: 20px;
-  max-width: 500px;
-  color: @apos-white;
-  background-color: @apos-primary;
-  .apos-drop-shadow;
+	font-family: 'Karla', sans-serif;
+	margin: 200px auto;
+	padding: 20px;
+	max-width: 500px;
+	color: @apos-white;
+	background-color: @apos-primary;
+	.apos-drop-shadow;
 
-  .login-link {
-    float: right;
-    color: @apos-white;
-  }
+	.login-link {
+		float: right;
+		color: @apos-white;
+	}
 
-  // Basic rich-text editor styles:
-  h3 {
-    font-size: 24px;
-    margin-bottom: 12px;
-  }
+	// Basic rich-text editor styles:
+		strong { font-weight: bold; }
+		em { font-style: italic; }
+}
 
-  h4 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Roboto', sans-serif;
+}
 
-  strong { font-weight: bold; }
-  em { font-style: italic; }
+.apos-slideshow h4 {display: none;}
+
+//Test CSS Code
+.header {
+	width: 100%;
+	height: 400px;
+	display: flex;
+	img {
+		max-width: 10px;
+	}
+}
+
+.logo-image-area {
+	float: left
 }

@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<div class = 'services-header-text'>
+	{{ apos.singleton(data.page, 'services_header_text', 'apostrophe-rich-text', {  }) }}
+</div>	
+
+<div class = 'trainings'>
+	{{ apos.singleton(data.page, 'trainings', 'section-headers', {  }) }}
+	<div class = 'trainings-bullet-list'>
+		{{ apos.singleton(data.page, 'trainings_bullet_list', 'bullet-list', {  }) }}
+	</div>
+	<div class = 'get-info-button'>
+		{{ apos.singleton(data.page, 'get_info_button', 'link-button', { }) }}
+	</div>
+</div>
+
+<div class = 'assessments'>
+	{{ apos.singleton(data.page, 'assessments_section_header', 'section-headers', {  }) }}
+</div>
+
+<div class = 'consulations'>
+	{{ apos.singleton(data.page, 'consulations_section_header', 'section-headers', {  }) }}
+</div>
+
+{% endblock %}
