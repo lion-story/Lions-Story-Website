@@ -15,28 +15,17 @@
     <p>This is a very bare bones Apostrophe project. Now, get to work and make a real website!</p>
   </div>
 </-->
+{{ apos.singleton(data.page, 'header', 'headers', {  }) }}
 
 <div class='services'>
-	{{ apos.singleton(data.page, 'services_header', 'section-headers', { }) }}
-	{{ apos.singleton(data.page, 'service_button', 'link-button', {  }) }}
-	{{ apos.singleton(data.page, 'service_one', 'image-over-text', {  }) }}
-	{{ apos.singleton(data.page, 'service_two', 'image-over-text', {  }) }}
-	{{ apos.singleton(data.page, 'service_three', 'image-over-text', {  }) }}
+  {{ apos.singleton(data.page, 'headline','section-headers', {})}}
+  <div class='service-cards'>
+    {{apos.singleton(data.page, 'services_card', 'linked-card', {})}}
+    {{apos.singleton(data.page, 'village_card', 'linked-card', {})}}
+    {{apos.singleton(data.page, 'work_card', 'linked-card', {})}}
+  </div>
 </div>
 
-<div class='val-app-his'>
-  {{ apos.singleton(data.page, 'vah_image', 'apostrophe-images', {  }) }}
-  <div class='value'>
-    {{ apos.singleton(data.page, 'service_one', 'image-over-text', {  }) }}
-  </div>
-  <div class='approach'>
-    {{ apos.singleton(data.page, 'service_two', 'image-over-text', {  }) }}
-    {{ apos.singleton(data.page, 'about_page_button', 'link-button', { }) }}
-  </div>
-  <div class='history'>
-    {{ apos.singleton(data.page, 'service_three', 'image-over-text', {  }) }}
-  </div>
-</div>
 
 <div class='the-village'>
   {{ apos.singleton(data.page, 'village_header', 'section-headers', { }) }}

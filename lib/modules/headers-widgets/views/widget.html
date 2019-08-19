@@ -1,18 +1,7 @@
-<div class='logo-image-area'>
-	{{ apos.singleton(data.widget, 'logo_image', 'apostrophe-images', { }) }}
-</div>
-
-<ul class = 'tabs'>
-	{% for page in data.home._children %}
-		<li class = 'nav-item' ><a href = '{{page._url}}'> {{page.title}} </li>
-	{% endfor %}
-</ul>
-
-<h2 class='page-title'>
-	{{data.page.title}}
-</h2>
-<div class='header-image-area'>
-	{{ apos.singleton(data.widget, 'header_image', 'apostrophe-images', { }) }}
+<div class='container'>
+	<div class='img-fluid'>
+		{{ apos.singleton(data.widget, 'header_image', 'apostrophe-images', { }) }}
+	</div>
 </div>
 
 <style>
