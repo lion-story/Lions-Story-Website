@@ -17,32 +17,20 @@
 </-->
 {{ apos.singleton(data.page, 'header', 'headers', {  }) }}
 
-<div class='services'>
-  {{ apos.singleton(data.page, 'headline','section-headers', {})}}
-  <div class='service-cards'>
+<div class='services h-100'>
+  <div class='container mb-4'>
+    {{ apos.singleton(data.page, 'headline','section-headers', {})}}
+    {{ apos.singleton(data.page, 'work_with_us', 'link-button', { }) }}
+  </div>
+  <div class='service-cards container d-flex justify-content-between'>
     {{apos.singleton(data.page, 'services_card', 'linked-card', {})}}
     {{apos.singleton(data.page, 'village_card', 'linked-card', {})}}
     {{apos.singleton(data.page, 'work_card', 'linked-card', {})}}
   </div>
 </div>
 
-
-<div class='the-village'>
-  {{ apos.singleton(data.page, 'village_header', 'section-headers', { }) }}
-  {{ apos.singleton(data.page, 'team_mini_one', 'mini-profile', { }) }}
-  {{ apos.singleton(data.page, 'team_mini_two', 'mini-profile', { }) }}
-  {{ apos.singleton(data.page, 'team_mini_three', 'mini-profile', { }) }}
-  {{ apos.singleton(data.page, 'stories_page_button', 'link-button', { }) }}
+<div class='container racial-literacy-section'>
+{{ apos.singleton(data.page, 'name', 'two-column', { }) }}
 </div>
 
-<div class='team'>
-  {{ apos.singleton(data.page, 'team_header', 'section-headers', { }) }}
-  {{ apos.singleton(data.page, 'team_mini_one', 'mini-profile', { }) }}
-  {{ apos.singleton(data.page, 'team_mini_two', 'mini-profile', { }) }}
-  {{ apos.singleton(data.page, 'team_mini_three', 'mini-profile', { }) }}
-  {{ apos.singleton(data.page, 'team_page_button', 'link-button', { }) }}
-</div>
-
-<div class='contact-form'>
-</div>
 {% endblock %}

@@ -76,6 +76,9 @@ var apos = require('apostrophe')({
     'navbar-widgets': {},
 
     //Mainly for the services cards on the home page
-    'linked-card-widgets': {}
+    'linked-card-widgets': {},
+
+    //Creates two columns for singletons to be placed in
+    'two-column-widgets': {}
   }
 });
