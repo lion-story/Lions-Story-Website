@@ -29,8 +29,34 @@
   </div>
 </div>
 
-<div class='container racial-literacy-section'>
-{{ apos.singleton(data.page, 'name', 'two-column', { }) }}
+<div class='container mt-5'>
+  <div class='racial-literacy-section row w-100'>
+    <div class='column-left col-6'>
+        {{ apos.singleton(data.page, 'columnLeftText', 'apostrophe-rich-text', {}) }}
+    </div>
+    <div class='column-right col-6'>
+        {{ apos.singleton(data.page, 'literacyRightTextOne', 'apostrophe-rich-text', {}) }}
+        {{ apos.singleton(data.page, 'literacyRightTextTwo', 'apostrophe-rich-text', {}) }}
+    </div>
+  </div>
+</div>
+<div class='container mt-5'>
+  <div class='contact-section row w-100'>
+    <div class='column-left col-6'>
+        {{ apos.singleton(data.page, 'contactLeftImage', 'apostrophe-images', {}) }}
+    </div>
+    <div class='column-right col-6'>
+        {{ apos.singleton(data.page, 'contactRightTextOne', 'apostrophe-rich-text', {}) }}
+        {{ apos.singleton(data.page, 'contactRightTextTwo', 'apostrophe-rich-text', {}) }}
+        {{ apos.singleton(data.page, 'contact_button', 'link-button', { }) }}
+    </div>
+  </div>
+</div>
+<div class='container mt-5'>
+  <div class='howard-quote w-100 text-center'>
+        {{ apos.singleton(data.page, 'quoteOne', 'apostrophe-rich-text', {}) }}
+        {{ apos.singleton(data.page, 'quoteTwo', 'apostrophe-rich-text', {}) }}
+
 </div>
 
 {% endblock %}
