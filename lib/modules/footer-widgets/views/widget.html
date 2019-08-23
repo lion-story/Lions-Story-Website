@@ -1,19 +1,75 @@
-<div class='copyright-text'>
-	{{ apos.singleton(data.widget, 'copyright_text', 'apostrophe-rich-text', { }) }}
+<div class='container row footer pt-5'>
+	<div class='card footer-card col-lg-2 col-m-2 col-sm-12'>
+		<div class='card-body p-0'>
+			<h6 class='footer-card-title card-title'>
+				{{ apos.singleton(data.global, 'contactHeader', 'apostrophe-rich-text', { }) }}
+			</h6>
+			<div class='card-text column'>
+				<ul class = ''>
+					{% for item, text in data.widget.contact %}
+						<li class = 'footer-item' > {{text}} </li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class='card footer-card col-lg-2 col-m-2 col-sm-12'>
+		<div class='card-body p-0'>
+			<h6 class='footer-card-title card-title'>
+				{{ apos.singleton(data.global, 'infoHeader', 'apostrophe-rich-text', { }) }}
+			</h6>
+			<div class='card-text column'>
+				<ul class = ''>
+					{% for object in data.widget.moreInfo %}
+								<li class = 'footer-item' > <a href='{{object.moreInfoItem.moreInfoLink}}'>{{object.moreInfoItem.moreInfoText}}</a> </li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class='card footer-card col-lg-4 col-m-4 col-sm-12'>
+		<div class='card-body p-0'>
+			<h6 class='footer-card-title card-title'>
+				{{ apos.singleton(data.global, 'socialHeader', 'apostrophe-rich-text', { }) }}
+			 </h6>
+			<div class='card-text column'>
+				<ul class = ''>
+					{% for object in data.widget.social%}
+								<li class = 'footer-item' > {{object.socialMedia.socialMediaFav.items[0].content}} <a href='{{object.socialMedia.socialMediaLink}}'> {{object.socialMedia.socialMediaName}}</a> </li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class='card footer-card col-lg-4 col-m-3 col-sm-12'>
+		<div class='card-body footer-card-body p-0'>
+			<h6 class='updates-card-title card-title'>
+			{{ apos.singleton(data.global, 'updatesHeader', 'apostrophe-rich-text', { }) }}
+			</h6>
+			<div class='card-text column'>
+			{{ apos.singleton(data.global, 'updatesHeader', 'apostrophe-rich-text', { }) }}
+			</div>
+		</div>
+	</div>
 </div>
-
-<div class='newsletter-text-link'>
-	{{ apos.singleton(data.widget, 'newsletter_text_link', 'apostrophe-rich-text', { }) }}
-</div>
-
-<div class='footer-logo'>
-	{{ apos.singleton(data.widget, 'footer_logo', 'apostrophe-images', { }) }}
-</div>
-
-<div class='cbk-logo'>
-	{{ apos.singleton(data.widget, 'cbk_logo', 'apostrophe-images', { }) }}
-</div>
-
-<div class='favicons'>
-	{{ apos.singleton(data.widget, 'favicons', 'apostrophe-images', { }) }}
-</div>
+<script>
+console.log('Object Dump:',{{data.widget.social | dump | safe}})
+console.log({{data.widget.social.socialMedia.socialMediaName}})
+</script>
+<style>
+	.footer-card{
+		width: 21rem;
+		border: none;
+		background-color: #292663;
+		color: white;
+	}
+	.footer-card-title{
+		color: #faab21 !important;
+	}
+	.footer-item{
+		font-size: 0.75rem;
+	}
+	.footer{
+		background-color: #292663;
+	}
+</style>

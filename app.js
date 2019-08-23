@@ -29,6 +29,9 @@ var apos = require('apostrophe')({
           minify:false
         },
         {
+          name: 'site'
+        },
+        {
           scripts: [
             {
               name:'bootstrap.min',
@@ -37,6 +40,17 @@ var apos = require('apostrophe')({
           ]
         }
       ]
+    },
+
+    'apostrophe-favicons': {},
+    'apostrophe-favicons-global': {
+      destinationDir: '/fav/',
+
+      faviconConfig: {
+        icons: {
+          windows: false
+        }
+      }
     },
 
     'apostrophe-rich-text':{
