@@ -1,9 +1,10 @@
+{% import 'apostrophe-templates:styled-text.html' as text %}
 <div class='container ml-6 mr-6'>
 	<h2 class = 'section-title'>
-		{{ apos.singleton(data.widget, 'section_title', 'apostrophe-rich-text', { }) }}
+		{{ text.styledText(data.widget,'section_title')}}
 	</h2>
 	<div class = 'section-header-text'>
-		{{ apos.singleton(data.widget, 'section_header_text', 'apostrophe-rich-text', { }) }}
+		{{ text.styledText(data.widget,'section_header_text')}}
 	</div>
 </div>
 

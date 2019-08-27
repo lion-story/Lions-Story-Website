@@ -53,18 +53,6 @@ var apos = require('apostrophe')({
       }
     },
 
-    'apostrophe-rich-text':{
-      toolbar:['Bold','Italic','Link','Unlink'],
-      styles: [
-        {name: 'Paragraph', element: 'p'},
-        {name: 'H1', element: 'h1'},
-        {name: 'H2', element: 'h2'},
-        {name: 'H3', element: 'h3'},
-        {name: 'H4', element: 'h4'},
-        {name: 'H5', element: 'h5'}
-      ]
-    },
-    
     //Used for the headers/heros of the page
     //Contains a navbar, bg image, logo image, and text for the page title
     'headers-widgets': {},

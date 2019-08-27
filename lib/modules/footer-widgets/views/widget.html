@@ -1,8 +1,9 @@
+{% import 'apostrophe-templates:styled-text.html' as text %}
 <div class='container row footer pt-5'>
 	<div class='card footer-card col-lg-2 col-m-2 col-sm-12'>
 		<div class='card-body p-0'>
 			<h6 class='footer-card-title card-title'>
-				{{ apos.singleton(data.global, 'contactHeader', 'apostrophe-rich-text', { }) }}
+				{{ text.styledText(data.global,'contactHeader')}}
 			</h6>
 			<div class='card-text column'>
 				<ul class = ''>
@@ -16,7 +17,7 @@
 	<div class='card footer-card col-lg-2 col-m-2 col-sm-12'>
 		<div class='card-body p-0'>
 			<h6 class='footer-card-title card-title'>
-				{{ apos.singleton(data.global, 'infoHeader', 'apostrophe-rich-text', { }) }}
+				{{ text.styledText(data.global,'infoHeader')}}
 			</h6>
 			<div class='card-text column'>
 				<ul class = ''>
@@ -30,7 +31,7 @@
 	<div class='card footer-card col-lg-4 col-m-4 col-sm-12'>
 		<div class='card-body p-0'>
 			<h6 class='footer-card-title card-title'>
-				{{ apos.singleton(data.global, 'socialHeader', 'apostrophe-rich-text', { }) }}
+				{{ text.styledText(data.global,'socialHeader')}}
 			 </h6>
 			<div class='card-text column'>
 				<ul class = ''>
@@ -44,10 +45,10 @@
 	<div class='card footer-card col-lg-4 col-m-3 col-sm-12'>
 		<div class='card-body footer-card-body p-0'>
 			<h6 class='updates-card-title card-title'>
-			{{ apos.singleton(data.global, 'updatesHeader', 'apostrophe-rich-text', { }) }}
+				{{ text.styledText(data.global,'updatesHeader')}}
 			</h6>
 			<div class='card-text column'>
-			{{ apos.singleton(data.global, 'updatesHeader', 'apostrophe-rich-text', { }) }}
+				{{ text.styledText(data.global,'updatesBody')}}
 			</div>
 		</div>
 	</div>
