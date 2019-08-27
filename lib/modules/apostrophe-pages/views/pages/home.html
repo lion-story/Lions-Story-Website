@@ -4,6 +4,7 @@
 #}
 
 {% extends "layout.html" %}
+{% import 'apostrophe-templates:styled-text.html' as text %}
 
 {% block main %}
 <!--
@@ -15,45 +16,50 @@
     <p>This is a very bare bones Apostrophe project. Now, get to work and make a real website!</p>
   </div>
 </-->
+{{ apos.singleton(data.page, 'header', 'headers', {  }) }}
 
-<div class='services'>
-	{{ apos.singleton(data.page, 'services_header', 'section-headers', { }) }}
-	{{ apos.singleton(data.page, 'service_button', 'link-button', {  }) }}
-	{{ apos.singleton(data.page, 'service_one', 'image-over-text', {  }) }}
-	{{ apos.singleton(data.page, 'service_two', 'image-over-text', {  }) }}
-	{{ apos.singleton(data.page, 'service_three', 'image-over-text', {  }) }}
-</div>
-
-<div class='val-app-his'>
-  {{ apos.singleton(data.page, 'vah_image', 'apostrophe-images', {  }) }}
-  <div class='value'>
-    {{ apos.singleton(data.page, 'service_one', 'image-over-text', {  }) }}
+<div class='services mt-4'>
+  <div class='container  w-50 mb-4'>
+    {{ apos.singleton(data.page, 'headline','section-headers', {})}}
+    {{ apos.singleton(data.page, 'work_with_us', 'link-button', { }) }}
   </div>
-  <div class='approach'>
-    {{ apos.singleton(data.page, 'service_two', 'image-over-text', {  }) }}
-    {{ apos.singleton(data.page, 'about_page_button', 'link-button', { }) }}
-  </div>
-  <div class='history'>
-    {{ apos.singleton(data.page, 'service_three', 'image-over-text', {  }) }}
+  <div class='service-cards container d-flex justify-content-between'>
+    {{apos.singleton(data.page, 'services_card', 'linked-card', {})}}
+    {{apos.singleton(data.page, 'village_card', 'linked-card', {})}}
+    {{apos.singleton(data.page, 'work_card', 'linked-card', {})}}
   </div>
 </div>
 
-<div class='the-village'>
-  {{ apos.singleton(data.page, 'village_header', 'section-headers', { }) }}
-  {{ apos.singleton(data.page, 'team_mini_one', 'mini-profile', { }) }}
-  {{ apos.singleton(data.page, 'team_mini_two', 'mini-profile', { }) }}
-  {{ apos.singleton(data.page, 'team_mini_three', 'mini-profile', { }) }}
-  {{ apos.singleton(data.page, 'stories_page_button', 'link-button', { }) }}
+<div class='container racial-literacy-section  mt-5 pt-5 pb-0'>
+  <div class='row w-100 p-0'>
+    <div class='column-left col-6'>
+				{{ text.styledText(data.page ,'columnLeftText')}}
+    </div>
+    <div class='column-right col-6'>
+				{{ text.styledText(data.page ,'literacyRightTextOne')}}
+				{{ text.styledText(data.page ,'literacyRightTextTwo')}}
+    </div>
+  </div>
+</div>
+<div class='container p-0'>
+  <div class='contact-section p-0 row w-100'>
+    <div class='column-left col-6'>
+        {{ apos.singleton(data.page, 'contactLeftImage', 'apostrophe-images', {}) }}
+    </div>
+    <div class='column-right col-6 mt-5'>
+				{{ text.styledText(data.page,'contactRightTextOne')}}
+				{{ text.styledText(data.page,'contactRightTextTwo')}}
+      <div class='mt-3'>
+          {{ apos.singleton(data.page, 'contact_button', 'link-button', { }) }}
+      </div>
+    </div>
+  </div>
+</div>
+<div class='howard-quote container pt-3'>
+  <div class='w-100 text-center'>
+				{{ text.styledText(data.page,'quoteOne')}}
+				{{ text.styledText(data.page,'quoteTwo')}}
+
 </div>
 
-<div class='team'>
-  {{ apos.singleton(data.page, 'team_header', 'section-headers', { }) }}
-  {{ apos.singleton(data.page, 'team_mini_one', 'mini-profile', { }) }}
-  {{ apos.singleton(data.page, 'team_mini_two', 'mini-profile', { }) }}
-  {{ apos.singleton(data.page, 'team_mini_three', 'mini-profile', { }) }}
-  {{ apos.singleton(data.page, 'team_page_button', 'link-button', { }) }}
-</div>
-
-<div class='contact-form'>
-</div>
 {% endblock %}

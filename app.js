@@ -21,7 +21,38 @@ var apos = require('apostrophe')({
     // `views/` folder of the project
 
     'apostrophe-templates': { viewsFolderFallback: path.join(__dirname, 'views') },
-    
+
+    'apostrophe-assets': {
+      stylesheets: [
+        {
+          name: 'bootstrap.min',
+          minify:false
+        },
+        {
+          name: 'site'
+        },
+        {
+          scripts: [
+            {
+              name:'bootstrap.min',
+              minify: false
+            }
+          ]
+        }
+      ]
+    },
+
+    'apostrophe-favicons': {},
+    'apostrophe-favicons-global': {
+      destinationDir: '/fav/',
+
+      faviconConfig: {
+        icons: {
+          windows: false
+        }
+      }
+    },
+
     //Used for the headers/heros of the page
     //Contains a navbar, bg image, logo image, and text for the page title
     'headers-widgets': {},
@@ -53,7 +84,13 @@ var apos = require('apostrophe')({
     'trainer-profile-widgets': {},
 
     //For the creation of bullet lists
-    'bullet-list-widgets': {}
+    'bullet-list-widgets': {},
+
+    //The navigation bar of each page
+    'navbar-widgets': {},
+
+    //Mainly for the services cards on the home page
+    'linked-card-widgets': {},
 
   }
 });

@@ -1,0 +1,40 @@
+
+<div class='container d-flex flex-row'>
+	<div class='navbar row align-items-center w-100'>
+		<div class='media mr-6'>
+			<a href='data.home._url'>
+				{{ apos.singleton(data.widget, 'logo_image', 'apostrophe-images', { }) }}
+			</a>
+		</div>
+
+		<ul class = 'navbar-nav ml-6 align-self-end'>
+			{% for page in data.home._children %}
+				<li class = 'nav-item ml-4' ><a class='' href='{{page._url}}'> {{page.title}} </li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
+
+<style>
+.navbar{
+	max-height: 50px;
+}
+.navbar-nav{
+	flex-direction: row;
+	flex-wrap: none;
+}
+
+.media{
+	max-width: 300px;
+	height: 100%;
+}
+
+.nav-item > a{
+	font-weight: bold;
+	text-decoration: none;
+	color: #292663 !important;
+}
+
+
+
+</style>
