@@ -16,37 +16,45 @@
     <p>This is a very bare bones Apostrophe project. Now, get to work and make a real website!</p>
   </div>
 </-->
+<div class='container h-100'>
 {{ apos.singleton(data.page, 'header', 'headers', {  }) }}
+</div>
 
-<div class='services top-level mt-4'>
-  <div class='container  w-50 mb-4'>
+<div class='container top-level h-100 w-100'>
+  <div class='container  w-md-50 mb-4'>
     {{ apos.singleton(data.page, 'headline','section-headers', {})}}
     {{ apos.singleton(data.page, 'work_with_us', 'link-button', { }) }}
   </div>
-  <div class='service-cards container d-flex justify-content-between'>
-    {{apos.singleton(data.page, 'services_card', 'linked-card', {})}}
-    {{apos.singleton(data.page, 'village_card', 'linked-card', {})}}
-    {{apos.singleton(data.page, 'work_card', 'linked-card', {})}}
+  <div class='row align-content-center'>
+    <div class='col-lg-4 col-md-12 my-1'>
+        {{apos.singleton(data.page, 'services_card', 'linked-card', {})}}
+    </div>
+    <div class='col-lg-4 col-md-12 my-1'>
+        {{apos.singleton(data.page, 'village_card', 'linked-card', {})}}
+    </div>
+    <div class='col-lg-4 col-md-12 my-1'>
+        {{apos.singleton(data.page, 'work_card', 'linked-card', {})}}
+    </div>
   </div>
 </div>
 
 <div class='container top-level racial-literacy-section off-white-bg mt-5 pt-5 pb-0'>
-  <div class='row w-100 p-0'>
-    <div class='column-left col-6'>
+  <div class='row p-0'>
+    <div class='column-left col-md'>
         {{ apos.singleton(data.page, 'columnLeftText', 'text', { }) }}
     </div>
-    <div class='column-right col-6'>
+    <div class='column-right col-md'>
         {{ apos.singleton(data.page, 'literacyRightTextOne', 'text', { }) }}
         {{ apos.singleton(data.page, 'literacyRightTextTwo', 'text', { }) }}
     </div>
   </div>
 </div>
 <div class='container top-level p-0'>
-  <div class='contact-section p-0 row w-100'>
-    <div class='column-left col-6'>
+  <div class='contact-section p-0 row'>
+    <div class='column-left col-md'>
         {{ apos.singleton(data.page, 'contactLeftImage', 'apostrophe-images', {}) }}
     </div>
-    <div class='column-right col-6 mt-5'>
+    <div class='column-right col-md'>
         {{ apos.singleton(data.page, 'contactRightTextOne', 'text', { }) }}
         {{ apos.singleton(data.page, 'contactRightTextTwo', 'text', { }) }}
       <div class='mt-3'>
@@ -57,8 +65,7 @@
 </div>
 <div class='howard-quote top-level yellow-bg container pt-3'>
   <div class='w-100 text-center'>
-				{{ text.styledText(data.page,'quoteOne')}}
-				{{ text.styledText(data.page,'quoteTwo')}}
+        {{ apos.singleton(data.page, 'quote', 'text', { }) }}
   </div>
 </div>
 
