@@ -1,9 +1,9 @@
 {% import 'apostrophe-templates:styled-text.html' as text %}
-<div class='container row footer pt-5'>
+<div class='row footer pt-5'>
 	<div class='card footer-card col-lg-2 col-m-2 col-sm-12'>
 		<div class='card-body p-0'>
 			<h6 class='footer-card-title card-title'>
-				{{ text.styledText(data.global,'contactHeader')}}
+				{{ apos.singleton(data.global, 'contactHeader', 'text', { }) }}
 			</h6>
 			<div class='card-text column'>
 				<ul class = ''>

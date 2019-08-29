@@ -1,10 +1,28 @@
 {% import 'apostrophe-templates:styled-text.html' as text %}
+{% set data = data.widget%}
+
+{% if data.titleColor %}
+	{% set titleColor = data.titleColor %}
+{% endif %}
+
+{% if data.textColor %}
+	{% set textColor = data.textColor %}
+{% endif %}
+
+{% if data.titleJustification %}
+	{% set titleJustification = data.titleJustification %}
+{% endif %}
+
+{% if data.textJustification %}
+	{% set textJustification = data.textJustification %}
+{% endif %}
+
 <div class='container ml-6 mr-6'>
-	<h2 class = 'section-title'>
-		{{ text.styledText(data.widget,'section_title')}}
+	<h2 class = 'section-title {{ titleJustification }} {{ titleColor }}'>
+		{{ text.styledText(data,'section_title')}}
 	</h2>
-	<div class = 'section-header-text'>
-		{{ text.styledText(data.widget,'section_header_text')}}
+	<div class = 'section-header-text {{ textJustification }} {{ textColor }}'>
+		{{ text.styledText(data,'section_header_text')}}
 	</div>
 </div>
 

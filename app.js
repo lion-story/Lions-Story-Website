@@ -92,5 +92,13 @@ var apos = require('apostrophe')({
     //Mainly for the services cards on the home page
     'linked-card-widgets': {},
 
+    //Used for team member cards on the about page
+    'team-card-widgets': {},
+
+    //Default text widget
+    'text-widgets': {},
+
+    //Creates column areas for widgets to be
+    'columns-widgets': {}
   }
 });

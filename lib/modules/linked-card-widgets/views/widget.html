@@ -1,22 +1,35 @@
 {% import 'apostrophe-templates:styled-text.html' as text %}
+{% set data = data.widget%}
+
+{% if data.titleColor %}
+	{% set titleColor = data.titleColor %}
+{% endif %}
+
+{% if data.textColor %}
+	{% set textColor = data.textColor %}
+{% endif %}
+
+{% if data.titleJustification %}
+	{% set titleJustification = data.titleJustification %}
+{% endif %}
+
+{% if data.textJustification %}
+	{% set textJustification = data.textJustification %}
+{% endif %}
+
 <div class='card'>
 	<div class='card-img-top'>
-        {{ apos.singleton(data.widget, 'cardImage', 'apostrophe-images', {}) }}
+        {{ apos.singleton(data, 'cardImage', 'apostrophe-images', {}) }}
 	</div>
 	<div class='card-body p-0'>
-		<h5 class='card-title'>
-			{{ text.styledText(data.widget ,'card_title')}}
+		<h5 class='card-title {{ titleJustification }} {{ titleColor }}'>
+			{{ text.styledText(data,'card_title')}}
 		</h5>
-		<p class='card-text'>
-			{{ text.styledText(data.widget ,'card_text')}}
+		<p class='card-text {{ textJustification }} {{ textColor }}'>
+			<div class='{{textColor}}'>
+				{{ text.styledText(data,'card_text')}}
+			</div>
 		</p>
-		<a href='{{data.widget.button_link}}' class='link-btn btn btn-primary align-bottom w-100'>{{data.widget.button_text}}</a>
+		<a href='{{data.button_link}}' class='link-btn btn btn-primary align-bottom w-100'>{{data.button_text}}</a>
 	</div>
 </div>
-
-<style>
-	.card{
-		width: 20rem;
-		border: none;
-	}
-</style>

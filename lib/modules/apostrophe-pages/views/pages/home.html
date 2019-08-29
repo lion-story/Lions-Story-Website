@@ -18,7 +18,7 @@
 </-->
 {{ apos.singleton(data.page, 'header', 'headers', {  }) }}
 
-<div class='services mt-4'>
+<div class='services top-level mt-4'>
   <div class='container  w-50 mb-4'>
     {{ apos.singleton(data.page, 'headline','section-headers', {})}}
     {{ apos.singleton(data.page, 'work_with_us', 'link-button', { }) }}
@@ -30,36 +30,36 @@
   </div>
 </div>
 
-<div class='container racial-literacy-section  mt-5 pt-5 pb-0'>
+<div class='container top-level racial-literacy-section off-white-bg mt-5 pt-5 pb-0'>
   <div class='row w-100 p-0'>
     <div class='column-left col-6'>
-				{{ text.styledText(data.page ,'columnLeftText')}}
+        {{ apos.singleton(data.page, 'columnLeftText', 'text', { }) }}
     </div>
     <div class='column-right col-6'>
-				{{ text.styledText(data.page ,'literacyRightTextOne')}}
-				{{ text.styledText(data.page ,'literacyRightTextTwo')}}
+        {{ apos.singleton(data.page, 'literacyRightTextOne', 'text', { }) }}
+        {{ apos.singleton(data.page, 'literacyRightTextTwo', 'text', { }) }}
     </div>
   </div>
 </div>
-<div class='container p-0'>
+<div class='container top-level p-0'>
   <div class='contact-section p-0 row w-100'>
     <div class='column-left col-6'>
         {{ apos.singleton(data.page, 'contactLeftImage', 'apostrophe-images', {}) }}
     </div>
     <div class='column-right col-6 mt-5'>
-				{{ text.styledText(data.page,'contactRightTextOne')}}
-				{{ text.styledText(data.page,'contactRightTextTwo')}}
+        {{ apos.singleton(data.page, 'contactRightTextOne', 'text', { }) }}
+        {{ apos.singleton(data.page, 'contactRightTextTwo', 'text', { }) }}
       <div class='mt-3'>
           {{ apos.singleton(data.page, 'contact_button', 'link-button', { }) }}
       </div>
     </div>
   </div>
 </div>
-<div class='howard-quote container pt-3'>
+<div class='howard-quote top-level yellow-bg container pt-3'>
   <div class='w-100 text-center'>
 				{{ text.styledText(data.page,'quoteOne')}}
 				{{ text.styledText(data.page,'quoteTwo')}}
-
+  </div>
 </div>
 
 {% endblock %}

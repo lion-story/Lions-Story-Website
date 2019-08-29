@@ -1,26 +1,67 @@
 {% extends "layout.html" %}
+{% import 'apostrophe-templates:styled-text.html' as text %}
 
 {% block main %}
-<div class = 'services-header-text'>
-	{{ apos.singleton(data.page, 'services_header_text', 'apostrophe-rich-text', {  }) }}
+
+{{ apos.singleton(data.page, 'header', 'headers', {  }) }}
+
+<div class = 'container top-level services-header'>
+	{{ apos.singleton(data.page, 'services_header', 'section-headers', {  }) }}
 </div>	
 
-<div class = 'trainings'>
+<div class = 'container top-level trainings'>
 	{{ apos.singleton(data.page, 'trainings', 'section-headers', {  }) }}
-	<div class = 'trainings-bullet-list'>
-		{{ apos.singleton(data.page, 'trainings_bullet_list', 'bullet-list', {  }) }}
-	</div>
-	<div class = 'get-info-button'>
-		{{ apos.singleton(data.page, 'get_info_button', 'link-button', { }) }}
+</div>
+
+
+<div class='container top-level'>
+	<div class='row'>
+		<div class='column-left col-6'>
+			{{ apos.singleton(data.page, 'experienceColumnLeftImage', 'apostrophe-images', {  }) }}
+		</div>
+		<div class='column-right blue-bg col-6'>
+			{{ apos.singleton(data.page, 'experienceColumnRightText', 'text', {  }) }}
+		</div>
 	</div>
 </div>
 
-<div class = 'assessments'>
-	{{ apos.singleton(data.page, 'assessments_section_header', 'section-headers', {  }) }}
+<div class='container top-level about-header'>
+	<div class='row'>
+		<div class='column-left col-6'>
+			{{ apos.singleton(data.page, 'consulting_text', 'section-headers', { }) }}
+		</div>
+		<div class='column-right col-6'>
+			{{ apos.singleton(data.page, 'assesssments_text', 'section-headers', { }) }}
+		</div>
+	</div>
+	<div class='d-flex justify-content-center'>
+		{{ apos.singleton(data.page, 'work_with_us', 'link-button') }}
+	</div>
 </div>
 
-<div class = 'consulations'>
-	{{ apos.singleton(data.page, 'consulations_section_header', 'section-headers', {  }) }}
+<div class='container off-white-bg top-level'>
+	<div class='row'>
+		<div class='column-left col-6'>
+			<div class='circle'>
+				{{ apos.singleton(data.page, 'experienceQuoteColumnLeftImage', 'apostrophe-images', {  }) }}
+			</div>
+			{{ apos.singleton(data.page, 'experienceQuoteColumnLeftText', 'text', { }) }}
+		</div>
+		<div class='column-right col-6'>
+			<div class='circle'>
+				{{ apos.singleton(data.page, 'experienceQuoteColumnRightImage', 'apostrophe-images', {  }) }}
+			</div>
+			{{ apos.singleton(data.page, 'experienceQuoteColumnRightText', 'text', { }) }}
+		</div>
+	</div>
+</div>
+
+<div class='container contact-us-box text-center'>
+			{{ apos.singleton(data.page, 'getMoreInformation', 'text', { }) }}
+			{{ apos.singleton(data.page, 'getMoreInformationText', 'text', { }) }}
+	<div class='mt-3'>
+		{{ apos.singleton(data.page, 'contact_button', 'link-button', { }) }}
+	</div>
 </div>
 
 {% endblock %}
