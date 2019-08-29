@@ -1,7 +1,7 @@
 {# To allow extra classes and tags be sure to allow them in the index.js file in the apostrophe-rich-text-widgets folder#}
 {% macro styledText(context, name) %}
 	{{apos.singleton(context, name, 'apostrophe-rich-text', {
-      toolbar:['Styles','Bold','Italic','Link','Unlink','Colors'],
+      toolbar:['Styles','Bold','Italic','Link','Unlink','Underline'],
       styles: [
         {name: 'Paragraph', element: 'p', attributes: {'class':'paragraph'} },
         {name: 'Small Text', element: 'p',attributes: {'class':'small-text'} },
@@ -11,10 +11,6 @@
         {name: 'H3', element: 'h3'},
         {name: 'H4', element: 'h4'},
         {name: 'H5', element: 'h5'}
-      ],
-	  colors: [
-		  {name: 'Default', element: 'font', attributes:{'color':'#292663'} }
-	  ]
-
+      ]
 	})}}
 {% endmacro %}

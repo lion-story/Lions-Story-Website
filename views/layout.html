@@ -31,6 +31,7 @@
 	like headers or navigation.
   #}
 	{{ apos.singleton(data.global, 'navbar', 'navbar', {  }) }}
+	{% import 'apostrophe-templates:styled-text.html' as text %}
 
 {% endblock %}
 
@@ -48,7 +49,7 @@
   #}
 
 
-	<div class='footer'>
+	<div class='container'>
 		{{ apos.singleton(data.global, 'footer', 'footer', {  }) }}
 	</div>
 {% endblock %}
