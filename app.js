@@ -42,16 +42,6 @@ var apos = require('apostrophe')({
       ]
     },
 
-    'apostrophe-favicons': {},
-    'apostrophe-favicons-global': {
-      destinationDir: '/fav/',
-
-      faviconConfig: {
-        icons: {
-          windows: false
-        }
-      }
-    },
 
     //Used for the headers/heros of the page
     //Contains a navbar, bg image, logo image, and text for the page title
@@ -98,7 +88,6 @@ var apos = require('apostrophe')({
     //Default text widget
     'text-widgets': {},
 
-    //Creates column areas for widgets to be
-    'columns-widgets': {}
+    'favicon-widgets': {}
   }
 });

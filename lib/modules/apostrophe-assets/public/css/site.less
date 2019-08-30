@@ -4,6 +4,7 @@
 body { 
 	background-color: @apos-light;
 	font-family: 'Lato', sans-serif;
+	line-height: 1.35 !important;
 }
 
 .main-content {
@@ -21,20 +22,21 @@ body {
 	}
 
 	// Basic rich-text editor styles:
-		strong { font-weight: bold; }
-		em { font-style: italic; }
 }
 
 //General style changes
+strong { font-weight: 550 !important; }
+em { font-style: italic; }
 h1,h2,h3,h4,h5,h6{
 	font-family: 'Roboto', sans-serif !important;
+	line-height:1.35 !important;
 }
 p{
 	font-family: 'Lato', sans-serif !important;
 	margin-bottom: 0 !important;
 }
 a{
-	text-decoration: none !important;
+	color: #292663 !important;
 }
 
 .off-white-bg{
@@ -55,6 +57,10 @@ a{
 
 .blue-text{
 	color: #292663;
+}
+
+.blue-text > a{
+	color: #292663 !important;
 }
 
 .gray-text{
@@ -91,8 +97,9 @@ a{
 	background-color: #faab21 !important;
 }
 .btn{
-	font-weight: bold;
-	border-radius: 0 !important;
+	font-weight: 550 !important;
+	border-radius: 0.1rem !important;
+	padding: 0.25rem;
 	margin-top: 0.75rem;
 	margin-bottom: 0.75rem;
 }

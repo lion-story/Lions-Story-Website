@@ -1,0 +1,18 @@
+{% import 'apostrophe-templates:styled-text.html' as text %}
+{% set data = data.widget%}
+
+{% if data.favicon%}
+	{% set Favicon = data.favicon%}
+{% endif %}
+
+{% if data.color %}
+	{% set Color = data.color %}
+{% endif %}
+
+<i class='{{ Color }} {{Favicon}} favicon'></i>
+
+<style>
+	.favicon{
+		font-size: 1rem;
+	}
+</style>
