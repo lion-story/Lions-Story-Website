@@ -4,6 +4,7 @@
 body { 
 	background-color: @apos-light;
 	font-family: 'Lato', sans-serif;
+	line-height: 1.35 !important;
 }
 
 .main-content {
@@ -21,26 +22,105 @@ body {
 	}
 
 	// Basic rich-text editor styles:
-		strong { font-weight: bold; }
-		em { font-style: italic; }
 }
 
+//General style changes
+strong { font-weight: 550 !important; }
+em { font-style: italic; }
 h1,h2,h3,h4,h5,h6{
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', sans-serif !important;
+	line-height:1.35 !important;
+}
+p{
+	font-family: 'Lato', sans-serif !important;
+	margin-bottom: 0 !important;
+}
+a{
+	color: #292663 !important;
+}
+
+.off-white-bg{
+	background-color: #f8f8f0;
+}
+
+.yellow-bg {
+	background-color: #faab21;
+}
+
+.blue-bg{
+	background-color: #292663;
+}
+
+.yellow-text{
+	color: #faab21;
+}
+
+.blue-text{
+	color: #292663;
+}
+
+.blue-text > a{
+	color: #292663 !important;
+}
+
+.gray-text{
+	color: #707070;
+}
+
+.white-text{
+	color: #f8f8f0;
+}
+
+.top-level{
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+
+.circle .apos-slideshow-item{
+	border-radius: 50%;
 }
 
 .apos-slideshow h4 {display: none;}
 
-//Test CSS Code
-.header {
-	width: 100%;
-	height: 400px;
-	display: flex;
-	img {
-		max-width: 10px;
-	}
+//Bootstrap style changes
+.p-0{
+	padding: 0%;
 }
 
-.logo-image-area {
-	float: left
+.card{
+	border: none !important;
+}
+
+.btn-primary{
+	color: #292663 !important;
+	border: none !important;
+	background-color: #faab21 !important;
+}
+.btn{
+	font-weight: 550 !important;
+	border-radius: 0.1rem !important;
+	padding: 0.25rem;
+	margin-top: 0.75rem;
+	margin-bottom: 0.75rem;
+}
+
+.card{
+	width: 20rem;
+	border: none;
+}
+
+.col{
+	min-width: 90%;
+	min-height: 100%;
+}
+//Apostrophe class styles
+.small-text{
+	font-size: 0.8rem;
+}
+#text{
+	display:none;
+}
+
+.extra-small-text{
+	font-size: 0.75rem;
 }
