@@ -1,19 +1,98 @@
-<div class='copyright-text'>
-	{{ apos.singleton(data.widget, 'copyright_text', 'apostrophe-rich-text', { }) }}
+{% import 'apostrophe-templates:styled-text.html' as text %}
+<div class='row footer pt-5'>
+	<div class='card footer-card col-lg-2 col-m-2 col-sm-12'>
+		<div class='card-body p-0'>
+			<h6 class='footer-card-title card-title'>
+				CONTACT US
+			</h6>
+			<div class='card-text column'>
+				<ul class = ''>
+					{% for item, text in data.widget.contact %}
+						<li class = 'footer-item white-text' > {{text}} </li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class='card footer-card col-lg-2 col-m-2 col-sm-12'>
+		<div class='card-body p-0'>
+			<h6 class='footer-card-title card-title'>
+				MORE INFO
+			</h6>
+			<div class='card-text column'>
+				<ul class = ''>
+					{% for object in data.widget.moreInfo %}
+								<li class = 'footer-item white-text' > <a class='white-text' href='{{object.moreInfoItem.moreInfoLink}}'>{{object.moreInfoItem.moreInfoText}}</a> </li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class='card footer-card col-lg-3 col-m-4 col-sm-12'>
+		<div class='card-body p-0'>
+			<h6 class='footer-card-title card-title'>
+				FOLLOW US ON SOCIAL MEDIA!
+			 </h6>
+			<div class='card-text column'>
+				<ul class = ''>
+					 {% for object in data.widget.social%}
+								<li class = 'footer-item white-text' ><span class=' {{object.socialMedia.socialMediaFav}}'></span><a class='white-text' href='{{object.socialMedia.socialMediaLink}}'> {{object.socialMedia.socialMediaName}}</a> </li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class='card footer-card col-lg-5 col-m-3 col-sm-12'>
+		<div class='card-body footer-card-body p-0'>
+			<h6 class='updates-card-title card-title'>
+				Get updates about Lion's Story
+			</h6>
+			<div class='card-text column'>
+				Provide your email address below to <br> get all info about our news and events.
+			</div>
+<!-- Begin Mailchimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{}
+	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+<form action="https://thelionsstory.us3.list-manage.com/subscribe/post?u=54a4e9618bddbb6e785dfdf84&amp;id=bf6127e91a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	<input type="email" value="" name="EMAIL" class="email p-1" id="mce-EMAIL" placeholder="email address" required>
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_54a4e9618bddbb6e785dfdf84_bf6127e91a" tabindex="-1" value=""></div>
+    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-primary">
+    </div>
+</form>
 </div>
 
-<div class='newsletter-text-link'>
-	{{ apos.singleton(data.widget, 'newsletter_text_link', 'apostrophe-rich-text', { }) }}
+<!--End mc_embed_signup-->
+		</div>
+	</div>
 </div>
+<style>
+	.footer-card{
+		width: 21rem;
+		border: none;
+		background-color: #292663;
+		color: white;
+	}
+	.footer-card-title{
+		color: #faab21;
+	}
+	.footer-item{
+		font-size: 0.75rem;
+	}
+	.footer{
+		background-color: #292663;
+	}
 
-<div class='footer-logo'>
-	{{ apos.singleton(data.widget, 'footer_logo', 'apostrophe-images', { }) }}
-</div>
-
-<div class='cbk-logo'>
-	{{ apos.singleton(data.widget, 'cbk_logo', 'apostrophe-images', { }) }}
-</div>
-
-<div class='favicons'>
-	{{ apos.singleton(data.widget, 'favicons', 'apostrophe-images', { }) }}
-</div>
+	.email{
+		border: #428cf5 1px solid;
+		border-radius: 0.3rem;
+		background-color: #292663;
+		color: white;
+	}
+</style>

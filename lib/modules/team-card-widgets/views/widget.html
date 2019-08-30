@@ -1,0 +1,19 @@
+<div class='card member-card mx-auto'>
+	<div class='card-body'>
+		<div class='card-img-top'>
+			{{ apos.singleton(data.widget, 'memberImage', 'apostrophe-images', {}) }}
+		</div>
+		<h5 class='card-title text-center'>
+			{{ data.widget.memberName}}
+		</h5>
+		<h6 class='card-subtitle text-center'>
+			{{ data.widget.memberTitle}}
+		</h6>
+	</div>
+</div>
+
+<style>
+	.card-subtitle {
+		color: #faab21 !important;
+	}
+</style>

@@ -5,41 +5,114 @@
 {% extends 'layout.html' %}
 
 {% block main %}
-<div class = 'proverb'>
-	{{ apos.singleton(data.page, 'proverb', 'apostrophe-rich-text', {
-		toolbar: ['Styles', 'Bold', 'Italic']
-	 }) }}
-</div>
 
-<div class = 'racial-literacy'>
-	{{ apos.singleton(data.page, 'racial_literacy_header', 'section-headers', { 
-		toolbar: ['Styles', 'Bold', 'Italic']
-	}) }}
-</div>
-
-<div class = 'our-approach'>
-	{{ apos.singleton(data.page, 'our_approach_header', 'section-headers', { }) }}
-	{{ apos.singleton(data.page, 'approach_image', 'apostrophe-images', {  }) }}
-	{{ apos.singleton(data.page, 'learn_more', 'link-button', {  }) }}
-</div>
-
-<div class = 'team'>
-	{{ apos.singleton(data.page, 'team_header', 'section-headers', {  }) }}
-	<div class = 'team-member-large'>
-		{{ apos.singleton(data.page, 'team_member_large', 'image-left-text', {  }) }}
-	</div>
-	<div class = 'team-member-small'>
-		{{ apos.singleton(data.page, 'team_member_small', 'image-left-text', {  }) }}
-	</div>
-	<div class = 'team-member-small'>
-		{{ apos.singleton(data.page, 'team_member_small', 'image-left-text', {  }) }}
+<div class='container top-level about-header'>
+	<div class='row'>
+		<div class='column-left col-md'>
+			{{ apos.singleton(data.page, 'about_video', 'apostrophe-video', { }) }}
+		</div>
+		<div class='column-right col-md'>
+			{{ apos.singleton(data.page, 'about_header_text', 'text', { }) }}
+			{{ apos.singleton(data.page, 'download_info_sheet', 'link-button') }}
+		</div>
 	</div>
 </div>
 
-<div class = 'trainers'>
-	{{ apos.singleton(data.page, 'trainers_header', 'section-headers', {  }) }}
-	<div class = 'trainer-profiles'>
 
+<div class='container top-level  about-proverb'>
+	<div class='row'>
+		<div class='column-left col-md'>
+			{{ apos.singleton(data.page, 'about_proverb_leftText', 'text', { }) }}
+		</div>
+		<div class='column-right col-md'>
+			{{ apos.singleton(data.page, 'about_proverb_rightText', 'text', { }) }}
+		</div>
+	</div>
+</div>
+
+
+<div class='container top-level  about-qoutes yellow-bg py-2'>
+	<div class='row'>
+		<div class='column-left text-center col-md'>
+			{{ apos.singleton(data.page, 'about_quote_leftText', 'text', { }) }}
+		</div>
+		<div class='column-right text-center col-md'>
+			{{ apos.singleton(data.page, 'about_qoute_rightText', 'text', { }) }}
+		</div>
+	</div>
+</div>
+
+<div class = 'container top-level our-village'>
+	{{ apos.singleton(data.page, 'our_village_header', 'section-headers', { }) }}
+	<div class='row'>
+		<div class='col-lg-3 col-md-12 my-1'>
+			{{apos.singleton(data.page, 'teamCard1', 'team-card', {})}}
+		</div>
+		<div class='col-lg-3 col-md-12 my-1'>
+			{{apos.singleton(data.page, 'teamCard2', 'team-card', {})}}
+		</div>
+		<div class='col-lg-3 col-md-12 my-1'>
+			{{apos.singleton(data.page, 'teamCard3', 'team-card', {})}}
+		</div>
+		<div class='col-lg-3 col-md-12 my-1'>
+			{{apos.singleton(data.page, 'teamCard4', 'team-card', {})}}
+		</div>
+		<div class='col-lg-3 col-md-12 my-1'>
+			{{apos.singleton(data.page, 'teamCard5', 'team-card', {})}}
+		</div>
+		<div class='col-lg-3 col-md-12 my-1'>
+			{{apos.singleton(data.page, 'teamCard6', 'team-card', {})}}
+		</div>
+		<div class='col-lg-3 col-md-12 my-1'>
+			{{apos.singleton(data.page, 'teamCard7', 'team-card', {})}}
+		</div>
+		<div class='col-lg-3 col-md-12 my-1'>
+			{{apos.singleton(data.page, 'teamCard8', 'team-card', {})}}
+		</div>
+		<div class='col-lg-3 col-md-12 my-1'>
+			{{apos.singleton(data.page, 'teamCard9', 'team-card', {})}}
+		</div>
+		<div class='col-lg-3 col-md-12 my-1'>
+			{{apos.singleton(data.page, 'teamCard10', 'team-card', {})}}
+		</div>
+		<div class='col-lg-3 col-md-12 my-1'>
+			{{apos.singleton(data.page, 'teamCard11', 'team-card', {})}}
+		</div>
+		<div class='col-lg-3 col-md-12 my-1'>
+			{{apos.singleton(data.page, 'teamCard12', 'team-card', {})}}
+		</div>
+	</div>
+</div>
+
+<div class='container top-level p-0'>
+  <div class='contact-section p-0 row w-100'>
+    <div class='column-left col-md'>
+        {{ apos.singleton(data.page, 'trainers_header_image', 'apostrophe-images', {}) }}
+    </div>
+    <div class='column-right row col-md'>
+		<div class='w-100'>
+			{{ apos.singleton(data.page, 'trainers_header_text', 'text', { }) }}
+		</div>
+			<div class='column-left col-md'>
+				{{ apos.singleton(data.page, 'trainer_names_left', 'text', { }) }}
+			</div>
+			<div class='column-right col-md'>
+				{{ apos.singleton(data.page, 'trainer_names_right', 'text', { }) }}
+			</div>
+    </div>
+  </div>
+</div>
+
+<div class='container top-level text-center directors-board'>
+	{{ apos.singleton(data.page, 'directors_board', 'section-headers', {  }) }}
+	{{ apos.singleton(data.page, 'directors_board_members', 'text', { }) }}
+</div>
+
+<div class='container contact-us-box off-white-bg text-center'>
+			{{ apos.singleton(data.page, 'getMoreInformation', 'text', { }) }}
+			{{ apos.singleton(data.page, 'getMoreInformationText', 'text', { }) }}
+	<div class='mt-3'>
+		{{ apos.singleton(data.page, 'contact_button', 'link-button', { }) }}
 	</div>
 </div>
 {% endblock %}
