@@ -1,0 +1,14 @@
+{% import 'apostrophe-templates:styled-text.html' as text %}
+{% set data = data.widget%}
+
+{% if data.textColor %}
+	{% set textColor = data.textColor %}
+{% endif %}
+
+{% if data.textJustification %}
+	{% set textJustification = data.textJustification %}
+{% endif %}
+
+<div class='{{textColor}} {{textJustfication}}'>
+	{{ text.styledText(data,'text')}}
+</div>
