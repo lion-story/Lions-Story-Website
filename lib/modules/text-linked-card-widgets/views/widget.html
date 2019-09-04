@@ -18,16 +18,39 @@
 	{% set textJustification = data.textJustification %}
 {% endif %}
 
+{% if textColor == 'text-blue' %}
+	{% set textCssColor = 'color:#292663' %}
+{% endif%}
+{% if textColor == 'text-yellow' %}
+	{% set textCssColor = 'color: #faab21' %}
+{% endif%}
+{% if textColor == 'text-white' %}
+	{% set textCssColor = 'color:#f8f8f0' %}
+{% endif%}
+{% if textColor == 'text-grey' %}
+	{% set textCssColor = 'color: #707070' %}
+{% endif%}
+{% if headColor == 'text-blue' %}
+	{% set headCssColor = 'color:#292663' %}
+{% endif%}
+{% if headColor == 'text-yellow' %}
+	{% set headCssColor = 'color: #faab21' %}
+{% endif%}
+{% if headColor == 'text-white' %}
+	{% set headCssColor = 'color:#f8f8f0' %}
+{% endif%}
+{% if headColor == 'text-grey' %}
+	{% set headCssColor = 'color: #707070' %}
+{% endif%}
+
 <div class='card mx-auto mx-md-3' style='height: 300px;'>
 	<div class='card-body p-0 my-auto'>
-		<p class='card-head {{ headJustification }} {{ headColor }}'>
+		<div class='card-head {{ headJustification }} {{ headColor }}' style='{{headCssColor}}'>
 			{{ apos.singleton(data, 'card_head', 'text', {  }) }}
-		</p>
-		<p class='card-text {{ textJustification }} {{ textColor }}'>
-			<div class='{{textColor}}'>
+		</div>
+		<div class='card-text {{ textJustification }} {{ textColor }}' style='{{textCssColor}}'>
 				{{ apos.singleton(data, 'card_text', 'text', {  }) }}
-			</div>
-		</p>
+		</div>
 	</div>
 		<a href='{{data.button_link}}' class='link-btn btn btn-primary w-100 position-relative bottom'>{{data.button_text}}</a>
 </div>
