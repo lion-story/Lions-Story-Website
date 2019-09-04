@@ -1,0 +1,33 @@
+
+{% import 'apostrophe-templates:styled-text.html' as text %}
+{% set data = data.widget%}
+
+{% if data.headColor %}
+	{% set headColor = data.headColor %}
+{% endif %}
+
+{% if data.textColor %}
+	{% set textColor = data.textColor %}
+{% endif %}
+
+{% if data.headJustification %}
+	{% set headJustification = data.headJustification %}
+{% endif %}
+
+{% if data.textJustification %}
+	{% set textJustification = data.textJustification %}
+{% endif %}
+
+<div class='card mx-auto mx-md-3'>
+	<div class='card-body p-0'>
+		<p class='card-head {{ headJustification }} {{ headColor }}'>
+			{{ apos.singleton(data, 'card_head', 'text', {  }) }}
+		</p>
+		<p class='card-text {{ textJustification }} {{ textColor }}'>
+			<div class='{{textColor}}'>
+				{{ apos.singleton(data, 'card_text', 'text', {  }) }}
+			</div>
+		</p>
+		<a href='{{data.button_link}}' class='link-btn btn btn-primary align-bottom w-100'>{{data.button_text}}</a>
+	</div>
+</div>

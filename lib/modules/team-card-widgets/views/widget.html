@@ -3,17 +3,14 @@
 		<div class='card-img-top'>
 			{{ apos.singleton(data.widget, 'memberImage', 'apostrophe-images', {}) }}
 		</div>
-		<h5 class='card-title text-center'>
-			{{ data.widget.memberName}}
+		<h5 class='card-title text-center text-blue'>
+			{{ apos.singleton(data.widget, 'memberName', 'text', {  }) }}
 		</h5>
-		<h6 class='card-subtitle text-center'>
-			{{ data.widget.memberTitle}}
+		<h6 class='card-subtitle text-center text-yellow'>
+			{{ apos.singleton(data.widget, 'memberTitle', 'text', {  }) }}
 		</h6>
 	</div>
 </div>
 
 <style>
-	.card-subtitle {
-		color: #faab21 !important;
-	}
 </style>
