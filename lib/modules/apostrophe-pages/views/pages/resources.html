@@ -2,9 +2,11 @@
 
 {% block main %}
 
-<div class='container py-5 blue-bg'>
+<div class='container py-5 blue-bg d-flex flex-column justify-content-center'>
 	{{ apos.singleton(data.page, 'playlistText', 'text', {  }) }}
+<div class='d-flex justify-content-center'>
 	{{ apos.singleton(data.page, 'playlistButton', 'link-button', { }) }}
+</div>
 </div>
 
 <div class='container'>
@@ -23,7 +25,7 @@
 </div>
 
 <div class='container py-1 yellow-bg'>
-	{{ apos.singleton(data.page, 'playlistText', 'text', {  }) }}
+	{{ apos.singleton(data.page, 'mediumText', 'text', {  }) }}
 </div> 
 
 <div class='container py-1'>
@@ -32,24 +34,22 @@
 </div> 
 
 <div class='container top-level p-0'>
-  <div class='contact-section p-0 row w-100'>
+  <div class='book-section p-0 row w-100'>
     <div class='column-left col-md'>
         {{ apos.singleton(data.page, 'booksImage', 'apostrophe-images', {}) }}
     </div>
-    <div class='column-right row col-md'>
+    <div class='column-right row col-md p-0'>
 		<div class='w-100'>
 			{{ apos.singleton(data.page, 'books', 'text', { }) }}
 		</div>
-			<div class='column-left col-md'>
-				{{ apos.singleton(data.page, 'bookOne', 'linked-card', { }) }}
-				{{ apos.singleton(data.page, 'bookTwo', 'linked-card', { }) }}
-			</div>
-			<div class='column-right col-md'>
-				{{ apos.singleton(data.page, 'bookThree', 'linked-card', { }) }}
-				{{ apos.singleton(data.page, 'bookFour', 'linked-card', { }) }}
-			</div>
     </div>
   </div>
+	<div class='d-flex flex-wrap mx-auto'>
+					{{ apos.singleton(data.page, 'bookOne', 'text-linked-card', { }) }}
+					{{ apos.singleton(data.page, 'bookTwo', 'text-linked-card', { }) }}
+					{{ apos.singleton(data.page, 'bookThree', 'text-linked-card', { }) }}
+					{{ apos.singleton(data.page, 'bookFour', 'text-linked-card', { }) }}
+	</div>
 </div>
 
 <div class='container contact-us-box off-white-bg text-center'>

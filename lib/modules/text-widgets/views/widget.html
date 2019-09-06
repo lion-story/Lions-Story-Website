@@ -8,7 +8,16 @@
 {% if data.textJustification %}
 	{% set textJustification = data.textJustification %}
 {% endif %}
+{% if textJustification == 'text-center' %}
+	{% set cssJustification = 'text-align:center;' %}
+{% endif%}
+{% if textJustification == 'text-left' %}
+	{% set cssJustification = 'text-align:left;' %}
+{% endif%}
+{% if textJustification == 'text-right' %}
+	{% set cssJustification = 'text-align:right;' %}
+{% endif%}
 
-<div class='{{textColor}} {{textJustfication}}'>
+<div class='{{textColor}} {{textJustfication}}' style='{{ cssJustification }}'>
 	{{ text.styledText(data,'text')}}
 </div>

@@ -1,12 +1,15 @@
-<div class='container d-flex flex-row py-1'>
-	<div class='navbar row align-items-center w-100'>
-		<div class='media mr-6'>
+<div class='container d-flex flex-row py-1 h-100'>
+	<nav class='navbar navbar-dark navbar-expand-xl w-100'>
+		<div class='media navbar-brand mr-6 nav-media'>
 			<a href='{{ data.home._url }}'>
 				{{ apos.singleton(data.widget, 'logo_image', 'apostrophe-images', { }) }}
 			</a>
 		</div>
-
-		<ul class = 'navbar-nav ml-6 align-self-end'>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggleable" aria-controls="toggleable" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+		</button>
+		<ul class = 'collapse navbar-collapse justify-content-end m-0 mr-1' id='toggleable'>
+					<li class = 'nav-item' ><a class='nav-page p-1' href=''> </li>
 			{% for page in data.home._children %}
 				{% if ( data.page._url == page._url ) and page.title %}
 					<li class = 'nav-item active-nav-item ' ><a class='nav-page active-nav-link p-1' href='{{page._url}}'> {{page.title | upper}} </li>
@@ -16,29 +19,38 @@
 			{% endfor %}
 				<li class = 'nav-item ' ><a class='nav-page yellow-bg p-1 px-2' href=''>DONATE</a></li>
 		</ul>
-	</div>
+	</nav>
 </div>
 
 <style>
-.navbar{
+.nav-media{
 	max-height: 50px;
 }
 .navbar-nav{
 	flex-direction: row;
 	flex-wrap: none;
 }
-.
+
 .btn-nav{
 	padding: 10%;
 }
 
-.active-nav-item{
-	border-bottom: 2px solid #faab21 !important;
-	height: 100%;
+.show{
+	flex-direction: column;
 }
+.show > li{
+	align-content: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+.navbar-toggler{
+	background-color: #292663;
+}
+
 
 .active-nav-link{
 	color: #faab21 !important;
+	text-decoration: underline;
 }
 
 .media{
@@ -48,7 +60,6 @@
 
 .nav-page{
 	font-weight: bold !important;
-	text-decoration: none !important;
 	color: #292663 ;
 }
 
