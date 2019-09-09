@@ -88,6 +88,7 @@ var apos = require('apostrophe')({
     //Default text widget
     'text-widgets': {},
 
-    'favicon-widgets': {}
+    //similar to linked card but lacks an image
+    'text-linked-card-widgets': {}
   }
 });
