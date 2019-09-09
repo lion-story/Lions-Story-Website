@@ -38,17 +38,19 @@
   </div>
 </div>
 
-<div class='container top-level racial-literacy-section off-white-bg mt-5 pt-5 pb-0'>
-  <div class='row p-0'>
-    <div class='column-left col-md'>
-        {{ apos.singleton(data.page, 'columnLeftText', 'text', { }) }}
-        {{ apos.singleton(data.page, 'columnLeftTextTwo', 'text', { }) }}
-    </div>
-    <div class='column-right col-md'>
-        {{ apos.singleton(data.page, 'literacyRightTextOne', 'text', { }) }}
-        {{ apos.singleton(data.page, 'literacyRightTextTwo', 'text', { }) }}
-    </div>
-  </div>
+<div class='off-white-bg top-level'>
+	<div class='container racial-literacy-section off-white-bg'>
+		<div class='row p-0'>
+			<div class='column-left col-md'>
+				{{ apos.singleton(data.page, 'columnLeftText', 'text', { }) }}
+				{{ apos.singleton(data.page, 'columnLeftTextTwo', 'text', { }) }}
+			</div>
+			<div class='column-right col-md'>
+				{{ apos.singleton(data.page, 'literacyRightTextOne', 'text', { }) }}
+				{{ apos.singleton(data.page, 'literacyRightTextTwo', 'text', { }) }}
+			</div>
+		</div>
+	</div>
 </div>
 <div class='container top-level p-0'>
   <div class='contact-section p-0 row'>
@@ -64,7 +66,7 @@
     </div>
   </div>
 </div>
-<div class='howard-quote top-level yellow-bg container pt-3'>
+<div class='howard-quote top-level yellow-bg pt-3'>
   <div class='w-100 text-center'>
         {{ apos.singleton(data.page, 'howardQuote', 'text', { }) }}
   </div>
