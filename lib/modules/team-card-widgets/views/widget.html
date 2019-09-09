@@ -7,8 +7,11 @@
 		<h6 class='card-title yellow-text text-center'> {{ data.widget.memberTitle | upper }} </h6>
 	</div>
 </div>
-<div class='container my-5' id='bio-overlay' onclick='off()'>
-        {{ apos.singleton(data.widget, 'memberInfo', 'apostrophe-rich-text', {}) }}
+<div class='container my-5 blue-text' id='bio-overlay' onclick='off()'>
+		<div class='my-5 mx-4 blue-text'>
+			{{ apos.singleton(data.widget, 'memberImage', 'apostrophe-images', {}) }}
+			{{ apos.singleton(data.widget, 'memberInfo', 'apostrophe-rich-text', {}) }}
+		</div>
 </div>
 <div id='blur-overlay' onclick='off()'>
 </div>
@@ -17,6 +20,7 @@
 #bio-overlay{
     position: fixed;
     display: none;
+	overflow: scroll;
     width: 100%;
     top: 0;
     left: 0;
