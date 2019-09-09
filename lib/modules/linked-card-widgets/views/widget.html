@@ -23,11 +23,11 @@
 	</div>
 	<div class='card-body p-0'>
 		<h5 class='card-title {{ titleJustification }} {{ titleColor }}'>
-			{{ text.styledText(data,'card_title')}}
+			{{ apos.singleton(data, 'card_title', 'text', {  }) }}
 		</h5>
 		<p class='card-text {{ textJustification }} {{ textColor }}'>
 			<div class='{{textColor}}'>
-				{{ text.styledText(data,'card_text')}}
+				{{ apos.singleton(data, 'card_text', 'text', {  }) }}
 			</div>
 		</p>
 		<a href='{{data.button_link}}' class='link-btn btn btn-primary align-bottom w-100'>{{data.button_text}}</a>
