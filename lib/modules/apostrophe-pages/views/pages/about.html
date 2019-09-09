@@ -9,7 +9,12 @@
 <div class='container top-level about-header'>
 	<div class='row'>
 		<div class='column-left col-md'>
+			{#
 			{{ apos.singleton(data.page, 'about_video', 'apostrophe-video', { }) }}
+			#}
+			<div class="embed-responsive embed-responsive-16by9">
+				<iframe class="embed-responsive-item" src="https://embed.ted.com/talks/lang/en/howard_c_stevenson_how_to_resolve_racially_stressful_situations"></iframe>
+			</div>
 		</div>
 		<div class='column-right col-md'>
 			{{ apos.singleton(data.page, 'about_header_text', 'text', { }) }}
@@ -31,13 +36,15 @@
 </div>
 
 
-<div class='container top-level  about-qoutes yellow-bg py-2'>
-	<div class='row'>
-		<div class='column-left text-center col-md'>
-			{{ apos.singleton(data.page, 'about_quote_leftText', 'text', { }) }}
-		</div>
-		<div class='column-right text-center col-md'>
-			{{ apos.singleton(data.page, 'about_qoute_rightText', 'text', { }) }}
+<div class='top-level yellow-bg'>
+	<div class='container about-qoutes yellow-bg'>
+		<div class='row'>
+			<div class='column-left text-center col-md'>
+				{{ apos.singleton(data.page, 'about_quote_leftText', 'text', { }) }}
+			</div>
+			<div class='column-right text-center col-md'>
+				{{ apos.singleton(data.page, 'about_qoute_rightText', 'text', { }) }}
+			</div>
 		</div>
 	</div>
 </div>
@@ -108,7 +115,7 @@
 	{{ apos.singleton(data.page, 'directors_board_members', 'text', { }) }}
 </div>
 
-<div class='container contact-us-box off-white-bg text-center py-4'>
+<div class='contact-us-box off-white-bg text-center top-level'>
 			{{ apos.singleton(data.page, 'getMoreInformation', 'text', { }) }}
 			{{ apos.singleton(data.page, 'getMoreInformationText', 'text', { }) }}
 	<div class='mt-3'>

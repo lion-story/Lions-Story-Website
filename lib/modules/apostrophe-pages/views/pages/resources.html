@@ -2,7 +2,7 @@
 
 {% block main %}
 
-<div class='container py-5 blue-bg d-flex flex-column justify-content-center'>
+<div class='py-5 blue-bg d-flex flex-column justify-content-center'>
 	{{ apos.singleton(data.page, 'playlistText', 'text', {  }) }}
 <div class='d-flex justify-content-center'>
 	{{ apos.singleton(data.page, 'playlistButton', 'link-button', { }) }}
@@ -16,7 +16,12 @@
 <div class='container top-level'>
 	<div class='row'>
 		<div class='column-left col-md'>
+			{#
 			{{ apos.singleton(data.page, 'resourcesVideo', 'apostrophe-video', { }) }}
+			#}
+			<div class="embed-responsive embed-responsive-16by9">
+				<iframe class="embed-responsive-item" src="https://embed.ted.com/talks/lang/en/howard_c_stevenson_how_to_resolve_racially_stressful_situations"></iframe>
+			</div>
 		</div>
 		<div class='column-right col-md'>
 			{{ apos.singleton(data.page, 'resoucesVideoText', 'text', { }) }}
@@ -24,11 +29,13 @@
 	</div>
 </div>
 
-<div class='container py-1 yellow-bg'>
-	{{ apos.singleton(data.page, 'mediumText', 'text', {  }) }}
-</div> 
+<div class='yellow-bg top-level'>
+	<div class='container py-1 yellow-bg'>
+		{{ apos.singleton(data.page, 'mediumText', 'text', {  }) }}
+	</div> 
+</div>
 
-<div class='container py-1'>
+<div class='container py-1 top-level'>
 	{{ apos.singleton(data.page, 'booksArticles', 'section-headers', {  }) }}
 	{{ apos.singleton(data.page, 'Articles', 'text', {  }) }}
 </div> 
@@ -52,11 +59,13 @@
 	</div>
 </div>
 
-<div class='container contact-us-box off-white-bg text-center'>
-			{{ apos.singleton(data.page, 'getMoreInformation', 'text', { }) }}
-			{{ apos.singleton(data.page, 'getMoreInformationText', 'text', { }) }}
-	<div class='mt-3'>
-		{{ apos.singleton(data.page, 'contact_button', 'link-button', { }) }}
+<div class='off-white-bg top-level'>
+	<div class='container contact-us-box off-white-bg text-center'>
+		{{ apos.singleton(data.page, 'getMoreInformation', 'text', { }) }}
+		{{ apos.singleton(data.page, 'getMoreInformationText', 'text', { }) }}
+		<div class='mt-3'>
+			{{ apos.singleton(data.page, 'contact_button', 'link-button', { }) }}
+		</div>
 	</div>
 </div>
 {% endblock %}
