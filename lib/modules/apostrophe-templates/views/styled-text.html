@@ -2,7 +2,7 @@
 
 {% macro styledText(context, name) %}
 	{{apos.singleton(context, name, 'apostrophe-rich-text', {
-      toolbar:['Styles','Bold','Italic','Link','Unlink','Underline'],
+      toolbar:['Styles','Bold','Italic','Link','Unlink','Underline','BulletedList'],
       styles: [
         {name: 'Paragraph', element: 'p', attributes: {'class':'paragraph'} },
         {name: 'Small Text', element: 'p',attributes: {'class':'small-text'} },

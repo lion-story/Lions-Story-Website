@@ -9,7 +9,10 @@
 <div class='container top-level about-header'>
 	<div class='row'>
 		<div class='column-left col-md'>
+			{#
 			{{ apos.singleton(data.page, 'about_video', 'apostrophe-video', { }) }}
+			#}
+			{{ apos.singleton(data.page, 'about_header_image', 'apostrophe-images', { }) }}
 		</div>
 		<div class='column-right col-md'>
 			{{ apos.singleton(data.page, 'about_header_text', 'text', { }) }}
@@ -31,56 +34,29 @@
 </div>
 
 
-<div class='container top-level  about-qoutes yellow-bg py-2'>
-	<div class='row'>
-		<div class='column-left text-center col-md'>
-			{{ apos.singleton(data.page, 'about_quote_leftText', 'text', { }) }}
-		</div>
-		<div class='column-right text-center col-md'>
-			{{ apos.singleton(data.page, 'about_qoute_rightText', 'text', { }) }}
+<div class='top-level yellow-bg'>
+	<div class='container about-qoutes yellow-bg'>
+		<div class='row'>
+			<div class='column-left text-center col-md'>
+				{{ apos.singleton(data.page, 'about_quote_leftText', 'text', { }) }}
+			</div>
+			<div class='column-right text-center col-md'>
+				{{ apos.singleton(data.page, 'about_qoute_rightText', 'text', { }) }}
+			</div>
 		</div>
 	</div>
 </div>
-
 <div class = 'container top-level our-village'>
-	{{ apos.singleton(data.page, 'our_village_header', 'section-headers', { }) }}
-	<div class='row'>
-		<div class='col-lg-3 col-md-12 my-1'>
-			{{apos.singleton(data.page, 'teamCard1', 'team-card', {})}}
-		</div>
-		<div class='col-lg-3 col-md-12 my-1'>
-			{{apos.singleton(data.page, 'teamCard2', 'team-card', {})}}
-		</div>
-		<div class='col-lg-3 col-md-12 my-1'>
-			{{apos.singleton(data.page, 'teamCard3', 'team-card', {})}}
-		</div>
-		<div class='col-lg-3 col-md-12 my-1'>
-			{{apos.singleton(data.page, 'teamCard4', 'team-card', {})}}
-		</div>
-		<div class='col-lg-3 col-md-12 my-1'>
-			{{apos.singleton(data.page, 'teamCard5', 'team-card', {})}}
-		</div>
-		<div class='col-lg-3 col-md-12 my-1'>
-			{{apos.singleton(data.page, 'teamCard6', 'team-card', {})}}
-		</div>
-		<div class='col-lg-3 col-md-12 my-1'>
-			{{apos.singleton(data.page, 'teamCard7', 'team-card', {})}}
-		</div>
-		<div class='col-lg-3 col-md-12 my-1'>
-			{{apos.singleton(data.page, 'teamCard8', 'team-card', {})}}
-		</div>
-		<div class='col-lg-3 col-md-12 my-1'>
-			{{apos.singleton(data.page, 'teamCard9', 'team-card', {})}}
-		</div>
-		<div class='col-lg-3 col-md-12 my-1'>
-			{{apos.singleton(data.page, 'teamCard10', 'team-card', {})}}
-		</div>
-		<div class='col-lg-3 col-md-12 my-1'>
-			{{apos.singleton(data.page, 'teamCard11', 'team-card', {})}}
-		</div>
-		<div class='col-lg-3 col-md-12 my-1'>
-			{{apos.singleton(data.page, 'teamCard12', 'team-card', {})}}
-		</div>
+  <div class='py-3'>
+    {{ apos.singleton(data.page, 'our_village_header', 'section-headers', { }) }}
+  </div>
+	<div class=''>
+	    {{ apos.area(data.page, 'about_team', {
+		widgets: {
+		  'three-column': {
+		}
+	      }
+	    }) }}
 	</div>
 </div>
 
@@ -108,7 +84,7 @@
 	{{ apos.singleton(data.page, 'directors_board_members', 'text', { }) }}
 </div>
 
-<div class='container contact-us-box off-white-bg text-center py-4'>
+<div class='contact-us-box off-white-bg text-center top-level'>
 			{{ apos.singleton(data.page, 'getMoreInformation', 'text', { }) }}
 			{{ apos.singleton(data.page, 'getMoreInformationText', 'text', { }) }}
 	<div class='mt-3'>

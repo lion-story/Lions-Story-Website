@@ -14,16 +14,20 @@
 </div>
 
 
-<div class='container top-level'>
-	<div class='row'>
-		<div class='column-left col-md'>
-			{{ apos.singleton(data.page, 'experienceColumnLeftImage', 'apostrophe-images', {  }) }}
-		</div>
-		<div class='column-right blue-bg col-md'>
-			{{ apos.singleton(data.page, 'experienceColumnRightText', 'text', {  }) }}
-		</div>
+		<!--
+<div class='blue-bg top-level'>
+	<div class='container blue-bg'>
+		{{ apos.singleton(data.page, 'experienceColumnRightText', 'text', {  }) }}
+	  <div class='row'>
+	  <div class='column-left col-md'>
+	  {{ apos.singleton(data.page, 'experienceColumnLeftImage', 'apostrophe-images', {  }) }}
+	  </div>
+	  <div class='column-right blue-bg col-md'>
+	  </div>
+	  </div>
 	</div>
 </div>
+		-->
 
 <div class='container top-level about-header'>
 	<div class='row'>
@@ -39,24 +43,26 @@
 	</div>
 </div>
 
-<div class='container off-white-bg top-level'>
-	<div class='row'>
-		<div class='column-left col-md'>
-			<div class='circle w-50 mx-auto'>
-				{{ apos.singleton(data.page, 'experienceQuoteColumnLeftImage', 'apostrophe-images', {  }) }}
+<div class='off-white-bg top-level'>
+	<div class='container off-white-bg'>
+		<div class='row'>
+			<div class='column-left col-md'>
+				<div class='circle w-50 mx-auto'>
+					{{ apos.singleton(data.page, 'experienceQuoteColumnLeftImage', 'apostrophe-images', {  }) }}
+				</div>
+				{{ apos.singleton(data.page, 'experienceQuoteColumnLeftText', 'text', { }) }}
 			</div>
-			{{ apos.singleton(data.page, 'experienceQuoteColumnLeftText', 'text', { }) }}
-		</div>
-		<div class='column-right col-md'>
-			<div class='circle w-50 mx-auto'>
-				{{ apos.singleton(data.page, 'experienceQuoteColumnRightImage', 'apostrophe-images', {  }) }}
+			<div class='column-right col-md'>
+				<div class='circle w-50 mx-auto'>
+					{{ apos.singleton(data.page, 'experienceQuoteColumnRightImage', 'apostrophe-images', {  }) }}
+				</div>
+				{{ apos.singleton(data.page, 'experienceQuoteColumnRightText', 'text', { }) }}
 			</div>
-			{{ apos.singleton(data.page, 'experienceQuoteColumnRightText', 'text', { }) }}
 		</div>
 	</div>
 </div>
 
-<div class='container contact-us-box text-center'>
+<div class='container contact-us-box top-level text-center'>
 			{{ apos.singleton(data.page, 'getMoreInformation', 'text', { }) }}
 			{{ apos.singleton(data.page, 'getMoreInformationText', 'text', { }) }}
 	<div class='mt-3'>

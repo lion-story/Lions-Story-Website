@@ -1,12 +1,12 @@
 {% import 'apostrophe-templates:styled-text.html' as text %}
-<div class='row footer pt-5'>
-	<div class='card footer-card col-lg-2 col-m-2 col-sm-12'>
+<div class='row footer pt-5 pb-5'>
+	<div class='card footer-card col-lg-3 col-m-2 col-sm-12'>
 		<div class='card-body p-0'>
 			<h6 class='footer-card-title card-title'>
 				CONTACT US
 			</h6>
 			<div class='card-text column'>
-				<ul class = ''>
+				<ul class = 'footer-list'>
 					{% for item, text in data.widget.contact %}
 						<li class = 'footer-item white-text' > {{text}} </li>
 					{% endfor %}
@@ -20,7 +20,7 @@
 				MORE INFO
 			</h6>
 			<div class='card-text column'>
-				<ul class = ''>
+				<ul class = 'footer-list'>
 					{% for object in data.widget.moreInfo %}
 								<li class = 'footer-item white-text' > <a class='white-text' href='{{object.moreInfoItem.moreInfoLink}}'>{{object.moreInfoItem.moreInfoText}}</a> </li>
 					{% endfor %}
@@ -34,7 +34,7 @@
 				FOLLOW US ON SOCIAL MEDIA!
 			 </h6>
 			<div class='card-text column'>
-				<ul class = ''>
+				<ul class = 'footer-list'>
 					 {% for object in data.widget.social%}
 								<li class = 'footer-item white-text' ><span class=' {{object.socialMedia.socialMediaFav}}'></span><a class='white-text' href='{{object.socialMedia.socialMediaLink}}'> {{object.socialMedia.socialMediaName}}</a> </li>
 					{% endfor %}
@@ -42,13 +42,15 @@
 			</div>
 		</div>
 	</div>
-	<div class='card footer-card col-lg-5 col-m-3 col-sm-12'>
+	<div class='card footer-card col-lg-4 col-m-3 col-sm-12'>
 		<div class='card-body footer-card-body p-0'>
 			<h6 class='updates-card-title card-title'>
 				Get updates about Lion's Story
 			</h6>
-			<div class='card-text column'>
-				Provide your email address below to <br> get all info about our news and events.
+			<div class='card-text small-text column'>
+			    <p class='extra-small-text'>
+			    Provide your email address below to <br> get all info about our news and events.
+			    </p>
 			</div>
 <!-- Begin Mailchimp Signup Form -->
 <style type="text/css">
@@ -80,6 +82,9 @@
 	}
 	.footer-card-title{
 		color: #faab21;
+	}
+	.footer-list{
+	    list-style: none;
 	}
 	.footer-item{
 		font-size: 0.75rem;
