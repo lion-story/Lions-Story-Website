@@ -1,0 +1,15 @@
+{% for piece in data.widget._pieces %}
+<div class='w-100'>
+{% if piece._url %} <a href='{{piece._url}}'> {% endif %}
+	<div class='card member-card mx-auto'>
+		<div class='card-body'>
+			<div class='card-img-top'>
+				{{ apos.singleton(piece, 'headshot', 'apostrophe-images', {}) }}
+			</div>
+			<h5 class='card-title blue-text text-center pt-3'> {{ piece.title }} </h5>
+			<h6 class='card-title yellow-text text-center'> {{ piece.position | upper }} </h6>
+		</div>
+	</div>
+{% if piece._url %} </a> {% endif %}
+</div>
+{% endfor %}

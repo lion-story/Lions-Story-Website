@@ -1,0 +1,14 @@
+{# in lib/modules/team-member--pages/views/show.html #}
+{% extends "layout.html" %}
+  {% block main %}
+  <div class='container blue-text py-5'>
+    <div class='w-25 text-center mx-auto'>
+      {{ apos.singleton(data.piece, 'headshot', 'apostrophe-images', {}) }}
+    </div>
+    <p class='py-3'>{{apos.singleton(data.piece, 'bio', 'apostrophe-rich-text')}}</p>
+  </div>
+{% endblock %}
+
+
+<style>
+</style>

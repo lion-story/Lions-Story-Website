@@ -12,9 +12,7 @@
 			{#
 			{{ apos.singleton(data.page, 'about_video', 'apostrophe-video', { }) }}
 			#}
-			<div class="embed-responsive embed-responsive-16by9">
-				<iframe class="embed-responsive-item" src="https://embed.ted.com/talks/lang/en/howard_c_stevenson_how_to_resolve_racially_stressful_situations"></iframe>
-			</div>
+			{{ apos.singleton(data.page, 'about_header_image', 'apostrophe-images', { }) }}
 		</div>
 		<div class='column-right col-md'>
 			{{ apos.singleton(data.page, 'about_header_text', 'text', { }) }}
@@ -48,46 +46,17 @@
 		</div>
 	</div>
 </div>
-
 <div class = 'container top-level our-village'>
-	{{ apos.singleton(data.page, 'our_village_header', 'section-headers', { }) }}
-	<div class='row'>
-		<div class='col-lg-3 col-md-12 my-1'>
-			{{apos.singleton(data.page, 'teamCard1', 'team-card', {})}}
-		</div>
-		<div class='col-lg-3 col-md-12 my-1'>
-			{{apos.singleton(data.page, 'teamCard2', 'team-card', {})}}
-		</div>
-		<div class='col-lg-3 col-md-12 my-1'>
-			{{apos.singleton(data.page, 'teamCard3', 'team-card', {})}}
-		</div>
-		<div class='col-lg-3 col-md-12 my-1'>
-			{{apos.singleton(data.page, 'teamCard4', 'team-card', {})}}
-		</div>
-		<div class='col-lg-3 col-md-12 my-1'>
-			{{apos.singleton(data.page, 'teamCard5', 'team-card', {})}}
-		</div>
-		<div class='col-lg-3 col-md-12 my-1'>
-			{{apos.singleton(data.page, 'teamCard6', 'team-card', {})}}
-		</div>
-		<div class='col-lg-3 col-md-12 my-1'>
-			{{apos.singleton(data.page, 'teamCard7', 'team-card', {})}}
-		</div>
-		<div class='col-lg-3 col-md-12 my-1'>
-			{{apos.singleton(data.page, 'teamCard8', 'team-card', {})}}
-		</div>
-		<div class='col-lg-3 col-md-12 my-1'>
-			{{apos.singleton(data.page, 'teamCard9', 'team-card', {})}}
-		</div>
-		<div class='col-lg-3 col-md-12 my-1'>
-			{{apos.singleton(data.page, 'teamCard10', 'team-card', {})}}
-		</div>
-		<div class='col-lg-3 col-md-12 my-1'>
-			{{apos.singleton(data.page, 'teamCard11', 'team-card', {})}}
-		</div>
-		<div class='col-lg-3 col-md-12 my-1'>
-			{{apos.singleton(data.page, 'teamCard12', 'team-card', {})}}
-		</div>
+  <div class='py-3'>
+    {{ apos.singleton(data.page, 'our_village_header', 'section-headers', { }) }}
+  </div>
+	<div class=''>
+	    {{ apos.area(data.page, 'about_team', {
+		widgets: {
+		  'three-column': {
+		}
+	      }
+	    }) }}
 	</div>
 </div>
 
