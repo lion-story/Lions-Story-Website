@@ -85,10 +85,26 @@ var apos = require('apostrophe')({
     //Used for team member cards on the about page
     'team-card-widgets': {},
 
+    //Used to add team members that have a bio page and a card on about
+    'team-member': {},
+
+    //Used to display team-member piece
+    'team-member-widgets': {
+      extend: 'apostrophe-pieces-widgets'
+    },
+
+    //Pages for team members
+    'team-member-pages': {
+      extend: 'apostrophe-pieces-pages'
+    },
+
     //Default text widget
     'text-widgets': {},
 
     //similar to linked card but lacks an image
-    'text-linked-card-widgets': {}
+    'text-linked-card-widgets': {},
+
+    //Three column area
+    'three-column-widgets': {}
   }
 });

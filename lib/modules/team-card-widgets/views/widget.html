@@ -1,4 +1,5 @@
-<div class='card member-card mx-auto' onclick='on()'>
+{% set popupId = data.widget.memberName | replace (' ','-') %}
+<div class='card member-card mx-auto' onclick='toggle()'>
 	<div class='card-body'>
 		<div class='card-img-top'>
 			{{ apos.singleton(data.widget, 'memberImage', 'apostrophe-images', {}) }}
@@ -7,7 +8,9 @@
 		<h6 class='card-title yellow-text text-center'> {{ data.widget.memberTitle | upper }} </h6>
 	</div>
 </div>
-<div class='container my-5 blue-text' id='{{ data.widget.memberName | replace(" ","-") }}' onclick='off()'>
+
+
+<div class='container my-5 blue-text popup' id='{{ popupId }}' onclick='toggle()'>
 		<div class='my-5 mx-4 blue-text'>
 		<div class='col-md-3 col-sm-12'>
 			{{ apos.singleton(data.widget, 'memberImage', 'apostrophe-images', {}) }}
@@ -15,14 +18,13 @@
 			{{ apos.singleton(data.widget, 'memberInfo', 'apostrophe-rich-text', {}) }}
 		</div>
 </div>
-<div id='blur-overlay' onclick='off()'>
+<div id='blur-overlay {{ popupId }}' onclick='toggle()'>
 </div>
 
 <style>
-#{{ data.widget.memberName | replace(" ","-") }}{
-    position: fixed;
-    display: none;
+.popup{
 	overflow: scroll;
+	display: none;
     width: 100%;
     top: 0;
     left: 0;
@@ -32,9 +34,10 @@
     cursor: pointer;
 	background-color: #f8f8f0;
 }
+
 #blur-overlay{
     position: fixed;
-    display: none;
+	display: none;
     width: 100%;
     height: 100%;
     top: 0;
@@ -46,15 +49,16 @@
 	background-color: black;
     opacity: 0.5;
 }
+
+.showPop{
+	display: block !important;
+}
 </style>
 
 <script>
-    function on() {
-        document.getElementById('{{ data.widget.memberName | replace(" ","-") }}').style.display = 'block';
-        document.getElementById('blur-overlay').style.display = 'block';
-    }
-    function off() {
-        document.getElementById('{{ data.widget.memberName | replace(" ","-") }}').style.display = 'none';
-        document.getElementById('blur-overlay').style.display = 'none';
+
+    function toggle() {
+		var i = document.getElementById('popup');
+		i.classList.toggle('showPop')	
     }
 </script>
