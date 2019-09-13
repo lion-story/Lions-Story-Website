@@ -8,7 +8,11 @@
 			<div class='card-text column'>
 				<ul class = 'footer-list'>
 					{% for item, text in data.widget.contact %}
+					    {% if text == 'racialliteracy@lionsstory.org' %}
+					    <a href='mailto: {{ text }}'><li class = 'footer-item white-text' > {{text}} </li></a>
+						{% else %}
 						<li class = 'footer-item white-text' > {{text}} </li>
+						{% endif %}
 					{% endfor %}
 				</ul>
 			</div>
