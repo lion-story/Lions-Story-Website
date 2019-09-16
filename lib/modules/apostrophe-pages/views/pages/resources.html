@@ -42,20 +42,16 @@
 
 <div class='container top-level p-0'>
   <div class='book-section p-0 row w-100'>
-    <div class='column-left col-md'>
-        {{ apos.singleton(data.page, 'booksImage', 'apostrophe-images', {}) }}
-    </div>
-    <div class='column-right row col-md p-0'>
 		<div class='w-100'>
 			{{ apos.singleton(data.page, 'books', 'text', { }) }}
 		</div>
-    </div>
   </div>
-	<div class='d-flex flex-wrap mx-auto'>
-					{{ apos.singleton(data.page, 'bookOne', 'text-linked-card', { }) }}
-					{{ apos.singleton(data.page, 'bookTwo', 'text-linked-card', { }) }}
-					{{ apos.singleton(data.page, 'bookThree', 'text-linked-card', { }) }}
-					{{ apos.singleton(data.page, 'bookFour', 'text-linked-card', { }) }}
+	<div class=''>
+	    {{ apos.area(data.page, 'resources_books', {
+		widgets: {
+		  'three-column': {}
+	      }
+	    }) }}
 	</div>
 </div>
 
