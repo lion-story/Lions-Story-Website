@@ -26,7 +26,8 @@ var apos = require('apostrophe')({
         uploadfs: {
           https: true,
         cdn: {
-            enabled: true
+          enabled: true,
+          url:'_8dd68029b0f9d75e51c98fadc22faa7d.olprtlswtu.acm-validations.aws.'
           }
         }
       }
