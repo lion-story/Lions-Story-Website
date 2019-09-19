@@ -21,16 +21,6 @@ var apos = require('apostrophe')({
     // `views/` folder of the project
 
     'apostrophe-templates': { viewsFolderFallback: path.join(__dirname, 'views') },
-
-    'apostrophe-attachmenets': {
-        uploadfs: {
-          https: true,
-        cdn: {
-          enabled: true,
-          url:'_8dd68029b0f9d75e51c98fadc22faa7d.olprtlswtu.acm-validations.aws.'
-          }
-        }
-      }
     
     'apostrophe-assets': {
       stylesheets: [
