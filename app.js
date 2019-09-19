@@ -21,7 +21,7 @@ var apos = require('apostrophe')({
     // `views/` folder of the project
 
     'apostrophe-templates': { viewsFolderFallback: path.join(__dirname, 'views') },
-
+    
     'apostrophe-assets': {
       stylesheets: [
         {
