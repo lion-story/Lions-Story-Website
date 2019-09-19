@@ -31,7 +31,6 @@ var apos = require('apostrophe')({
           }
         }
       }
-    }
     
     'apostrophe-assets': {
       stylesheets: [
