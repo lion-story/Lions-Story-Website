@@ -22,6 +22,16 @@ var apos = require('apostrophe')({
 
     'apostrophe-templates': { viewsFolderFallback: path.join(__dirname, 'views') },
 
+    'apostrophe-attachmenets': {
+        uploadfs: {
+          https: true,
+        cdn: {
+            enabled: true
+          }
+        }
+      }
+    }
+    
     'apostrophe-assets': {
       stylesheets: [
         {
